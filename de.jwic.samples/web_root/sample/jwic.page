@@ -5,7 +5,15 @@
 	<link rel="stylesheet" type="text/css" href="sample.css">
 	<link rel="stylesheet" type="text/css" href="default.css">	
 	
+	<link rel="stylesheet" type="text/css" href="audio.css">	
+	<link rel="stylesheet" type="text/css" href="playButton.css">	
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	
+	<link rel="stylesheet" type="text/css" href="three-column-fxd.css">	
+	<link rel="stylesheet" type="text/css" href="videocontrols.css">
+	
 	<SCRIPT LANGUAGE="JavaScript" SRC="sample.js"></SCRIPT>
+	<SCRIPT LANGUAGE="JavaScript" SRC="html5audio.js"></SCRIPT>
 	
 #parse("jwic/include.body.vtl")
 
