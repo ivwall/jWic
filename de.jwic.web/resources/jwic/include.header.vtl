@@ -5,57 +5,26 @@
 	<title>#if($page.title)$page.title#else $page.name#end</title>
 	
 	<!-- fix for ie parsing problem xxx-->
-	<script type="text/javascript">
+	<!--script type="text/javascript">
 		var isIE = false;
 		var CKEDITOR_BASEPATH = "$contextPath/jwic/lib/ckeditor/";
-	</script>
+	</script-->
 	<!--[if IE]>
 		<script type="text/javascript">
 		    isIE = true;
 		    //any other IE specific stuff here
 		</script>
 	<![endif]-->
-	<META http-equiv="Cache-Control" content="no-cache">
+	<!-- META http-equiv="Cache-Control" content="no-cache">
 	<META http-equiv="Pragma" content="no-cache">
 	<META http-equiv="Expires" content="-1">
-	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8"-->
 	
 	#* CKEditor WYSIWYG HTML Editor library, required by CKEditor control. *#
-	<SCRIPT LANGUAGE="JavaScript" SRC="$contextPath/jwic/lib/ckeditor/ckeditor.js"></SCRIPT>
-	
 	#* SlickGrid *#
-	<link rel="stylesheet" type="text/css" href="$contextPath/jwic/lib/slickgrid/css/smoothness/jquery-ui-1.11.3.custom.min.css"/>
-	<link rel="stylesheet" type="text/css" href="$contextPath/jwic/lib/slickgrid/slick.grid.css"/>
-	<link rel="stylesheet" type="text/css" href="$contextPath/jwic/lib/slickgrid/slick-default-theme.css"/>
-	<link rel="stylesheet" type="text/css" href="$contextPath/jwic/lib/slickgrid/slick.additional.styles.css"/>
-	
-	<script language="JavaScript" src="$contextPath/jwic/lib/slickgrid/lib/firebugx.js"></script>
-
-	<script language="JavaScript" src="$contextPath/jwic/lib/slickgrid/lib/jquery-1.11.2.min.js"></script>
-	<script language="JavaScript" src="$contextPath/jwic/lib/slickgrid/lib/jquery-ui-1.11.3.min.js"></script>
-	<script language="JavaScript" src="$contextPath/jwic/lib/slickgrid/lib/jquery.event.drag-2.3.0.js"></script>
-	
-	<script language="JavaScript" src="$contextPath/jwic/lib/slickgrid/slick.core.js"></script>
-	<script language="JavaScript" src="$contextPath/jwic/lib/slickgrid/plugins/slick.cellrangedecorator.js"></script>
-	<script language="JavaScript" src="$contextPath/jwic/lib/slickgrid/plugins/slick.cellrangeselector.js"></script>
-	<script language="JavaScript" src="$contextPath/jwic/lib/slickgrid/plugins/slick.cellselectionmodel.js"></script>
-	<script language="JavaScript" src="$contextPath/jwic/lib/slickgrid/plugins/slick.rowselectionmodel.js"></script>
-	<script language="JavaScript" src="$contextPath/jwic/lib/slickgrid/slick.formatters.js"></script>
-	<script language="JavaScript" src="$contextPath/jwic/lib/slickgrid/slick.editors.js"></script>
-	<script language="JavaScript" src="$contextPath/jwic/lib/slickgrid/slick.grid.js"></script>
-	<script language="JavaScript" src="$contextPath/jwic/lib/slickgrid/slick.dataview.js"></script>
-	
-	<script language="JavaScript" src="$contextPath/jwic/lib/jQuery/dateFormat.js"></script>	
-	
 	#* Jchart  library, required by Chart control. *#
-	<SCRIPT LANGUAGE="JavaScript" SRC="$contextPath/jwic/lib/jchart/Chart.js"></SCRIPT>
-	<SCRIPT LANGUAGE="JavaScript" SRC="$contextPath/jwic/lib/jchart/src/Chart.StackedBar.js"></SCRIPT>
-	<SCRIPT LANGUAGE="JavaScript" SRC="$contextPath/jwic/lib/jchart/src/Chart.Scatter.js"></SCRIPT>
-	<SCRIPT LANGUAGE="JavaScript" SRC="$contextPath/jwic/lib/jchartoverlay/Chart.js"></SCRIPT>
-	<SCRIPT LANGUAGE="JavaScript" SRC="$contextPath/jwic/lib/jchartoverlay/src/Chart.Overlay.js"></SCRIPT>
-	
 	#if($context.getInitParameter("debug") == "1")
-	<script src="$contextPath/jwic/lib/jQuery/js/jquery-1.8.2.js"></script>
+	<!--script src="$contextPath/jwic/lib/jQuery/js/jquery-1.8.2.js"></script>
     <script src="$contextPath/jwic/lib/jQuery/js/jquery-ui-1.9.1.custom.js"></script> 
     <script src="$contextPath/jwic/lib/jQuery/js/autoNumeric.js"></script>
     <script src="$contextPath/jwic/lib/jQuery/timepicker/jquery-ui-timepicker-addon.js"></script>
@@ -63,16 +32,18 @@
     <script src="$contextPath/jwic/lib/jQuery/js/jquery.json-2.4.js"></script>
     <script src="$contextPath/jwic/lib/noty/jquery.noty.js"></script>
     <script src="$contextPath/jwic/lib/noty/layouts/top.js"></script>
-    <script src="$contextPath/jwic/lib/noty/themes/default.js"></script>
+    <script src="$contextPath/jwic/lib/noty/themes/default.js"></script-->
+    
 	<SCRIPT LANGUAGE="JavaScript" SRC="$contextPath/jwic/jwic_core.js"></SCRIPT>
 	<SCRIPT LANGUAGE="JavaScript" SRC="$contextPath/jwic/jwic_controls.js"></SCRIPT>
 	<SCRIPT LANGUAGE="JavaScript" SRC="$contextPath/jwic/balloon/balloon.js"></SCRIPT>	
 	<SCRIPT LANGUAGE="JavaScript" SRC="$contextPath/jwic/compatibility/jwic_compatibility.js"></SCRIPT>
 	
+	
 	<link rel="stylesheet" type="text/css" href="$contextPath/jwic/jwic.css">
 	<link rel="stylesheet" type="text/css" href="$contextPath/jwic/jwic_tblviewer.css">
 	<link rel="stylesheet" type="text/css" href="$contextPath/jwic/compatibility/jwic_compatibility.css">	
-
+	
 	
 	<link rel="stylesheet" type="text/css" href="$contextPath/jwic/balloon/balloon.css">
 	<link rel="stylesheet" type="text/css" href="$contextPath/jwic/lib/jQuery/timepicker/jquery-ui-timepicker-addon.css">		
@@ -122,6 +93,43 @@
 			}
 		});
 		
+	</script>
+	
+	<script type="text/javascript">
+		var soundPlayer = {
+		  audio: null,
+		  muted: false,
+		  playing: false,
+		  _ppromis: null,
+		  puse: function () {
+			  this.audio.pause();
+		  },
+		  play: function (file) {
+			  if (this.muted) {
+				  return false;
+			  }
+			  if (!this.audio && this.playing === false) {
+				  this.audio = new Audio(file);
+				  this._ppromis = this.audio.play();
+				  this.playing = true;
+		
+				  if (this._ppromis !== undefined) {
+					  this._ppromis.then(function () {
+						  soundPlayer.playing = false;
+					  });
+				  }
+		
+			  } else if (!this.playing) {
+		
+				  this.playing = true;
+				  this.audio.src = file;
+				  this._ppromis = soundPlayer.audio.play();
+				  this._ppromis.then(function () {
+					  soundPlayer.playing = false;
+				  });
+			  }
+		  }
+		};		
 	</script>
 	
 	<link rel="stylesheet" type="text/css" href="$contextPath/themes/${context.themeName}/jQuery/jquery-ui.css">	
