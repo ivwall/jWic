@@ -1,4 +1,4 @@
-package de.jwic.samples.mechos01.echo01;
+package de.jwic.samples.mechos01.echos01;
 
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;

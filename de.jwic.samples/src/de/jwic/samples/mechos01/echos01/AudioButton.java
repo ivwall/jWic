@@ -2,7 +2,7 @@
  * de.jwic.controls.AudioButton
  * $Id: Button.java,v 1.3 2011/09/09 15:09:01 adrianionescu12 Exp $
  */
-package de.jwic.samples.mechos01.echo01;
+package de.jwic.samples.mechos01.echos01;
 
 import de.jwic.base.IControlContainer;
 import de.jwic.base.ImageRef;

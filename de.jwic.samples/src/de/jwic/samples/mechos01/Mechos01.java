@@ -17,8 +17,8 @@ import java.util.HashMap;
 import java.util.Set;
 import java.util.Iterator;
 
-import de.jwic.samples.mechos01.echo01.Echo01;
-import de.jwic.samples.mechos01.echo01.AudioButton;
+import de.jwic.samples.mechos01.echos01.Echo01;
+import de.jwic.samples.mechos01.echos01.AudioButton;
 
 
 public class Mechos01 extends Application {
