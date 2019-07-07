@@ -8,6 +8,8 @@ import de.jwic.base.SessionContext;
 
 import de.jwic.controls.Button;
 import de.jwic.controls.LabelControl;
+import de.jwic.controls.ScrollableContainer;
+
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
 
@@ -19,7 +21,6 @@ import java.util.Iterator;
 
 import de.jwic.samples.mechos01.echos01.Echo01;
 import de.jwic.samples.mechos01.echos01.AudioButton;
-
 
 public class Mechos01 extends Application {
 
@@ -34,6 +35,7 @@ public class Mechos01 extends Application {
 		SessionContext sc = this.getSessionContext();
 		HashMap initParams = (HashMap)sc.getInitParameters();
 		Set keys = initParams.keySet();
+		System.out.println("-----.  session context key count "+keys.size());
 		for ( Iterator i = keys.iterator(); i.hasNext(); ) {
 			String key = (String)i.next();
 			String[] kValue = (String[])initParams.get(key);
