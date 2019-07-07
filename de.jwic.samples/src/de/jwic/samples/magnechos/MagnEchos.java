@@ -28,6 +28,9 @@ public class MagnEchos extends Application {
 			System.out.println(" key("+key+") name[0]"+kValue[0]);
 		}
 		
+		Echo_Control_Factory echoFactory = new Echo_Control_Factory();
+		IEchoController echoController = 
+		               echoFactory.getEchoController( "" );
 		
 		
 		return page;

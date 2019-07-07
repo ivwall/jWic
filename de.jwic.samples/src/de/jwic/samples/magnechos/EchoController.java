@@ -7,6 +7,7 @@ import de.jwic.base.IControlContainer;
 import de.jwic.controls.ScrollableContainer;
 
 public class EchoController extends ControlContainer {
+//public class EchoController implements IEchoController extends ControlContainer {
 	
 	public EchoController( IControlContainer container ) {
 		super(container);
@@ -19,4 +20,6 @@ public class EchoController extends ControlContainer {
 		
 		
 	}
+	
+	
 }
