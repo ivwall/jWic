@@ -16,7 +16,8 @@ public class MagnEchos extends Application {
 	
 	public String echoControllerClassName = 
 	                                 "de.jwic.samples.magnechos.EchoController";
-	public String echoWrapper = "de.jwic.samples.magnechos.EchoControllerWrapper";
+	public String echoWrapperClassName = 
+	                          "de.jwic.samples.magnechos.EchoControllerWrapper";
 	
 	public Control createRootControl(IControlContainer container) {
 		Page page = new Page(container);
@@ -34,7 +35,8 @@ public class MagnEchos extends Application {
 		
 		Echo_Control_Factory echoFactory = new Echo_Control_Factory();
 		
-		IEchoController echoController = echoFactory.getEchoController( echoWrapper );
+		IEchoController echoController = 
+		                  echoFactory.getEchoController( echoWrapperClassName );
 		
 		//echoController.init( echoController, "echoController");
 		echoController.init( page, "echoController");
