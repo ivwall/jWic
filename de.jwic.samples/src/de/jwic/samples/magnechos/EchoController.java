@@ -16,10 +16,10 @@ public class EchoController extends ControlContainer {
 		ScrollableContainer echoContainer =
 		                    new ScrollableContainer(this, "contentContainer");
 		echoContainer.setHeight("1000px");
-		echoContainer.setWidth("675pz");
-		
-		
+		echoContainer.setWidth("675pz");	
 	}
+	
+	public void reset() {}
 	
 	
 }
