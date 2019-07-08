@@ -36,6 +36,20 @@ public class ScrollingListOfEchos extends ControlContainer {
 		ScrollableContainer group = new ScrollableContainer(this, name);
 		group.setTemplateName(getClass().getName() + "_group");
 		
+		TableLayoutContainer tlc = new TableLayoutContainer(group, "table");
+		tlc.setColumnCount(2);
+		//tlc.setColumnCount(2);
+		
+		AudioButton aButton01 = new AudioButton(tlc);
+		aButton01.setTitle("tape two");
+		aButton01.addSelectionListener(new SelectionListener() {
+			public void objectSelected(SelectionEvent event) {
+				System.out.println("button 2 Mechos01.objectSelected event "+event.toString());
+				//playTape("\"http://localhost:8080/amp3s/1987-edification.mp3\"");
+				//echo.requireRedraw();
+			}
+		});
+		
 		
 		return group;
 	}	
