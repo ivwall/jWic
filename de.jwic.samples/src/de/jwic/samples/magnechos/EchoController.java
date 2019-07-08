@@ -13,10 +13,13 @@ public class EchoController extends ControlContainer {
 		super(container);
 		this.setTemplateName("MagnEchos");
 		
-		ScrollableContainer echoContainer =
-		                    new ScrollableContainer(this, "contentContainer");
-		echoContainer.setHeight("1000px");
-		echoContainer.setWidth("675pz");	
+		//ScrollableContainer echoContainer =
+		//                    new ScrollableContainer(this, "contentContainer");
+		//echoContainer.setHeight("1000px");
+		//echoContainer.setWidth("675pz");
+		
+		ScrollingListOfEchos listOfEchos = 
+		                    new ScrollingListOfEchos(this,"contentContainer");
 	}
 	
 	public void reset() {}
