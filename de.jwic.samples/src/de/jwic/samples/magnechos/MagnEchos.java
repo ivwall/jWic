@@ -19,7 +19,7 @@ public class MagnEchos extends Application {
 	
 	public Control createRootControl(IControlContainer container) {
 		Page page = new Page(container);
-		page.setTitle("MagnEchos");
+		page.setTitle("Magnetic Echos");
 		
 		SessionContext sc = this.getSessionContext();
 		HashMap initParams = (HashMap)sc.getInitParameters();
@@ -33,10 +33,10 @@ public class MagnEchos extends Application {
 		
 		Echo_Control_Factory echoFactory = new Echo_Control_Factory();
 		
-		IEchoController echoController = 
+		IEchoController echoWrapper = 
 		                  echoFactory.getEchoController( echoWrapperClassName );
 		
-		echoController.init( page, "echoController");
+		echoWrapper.init( page, "echoController");
 		
 		return page;
 	}

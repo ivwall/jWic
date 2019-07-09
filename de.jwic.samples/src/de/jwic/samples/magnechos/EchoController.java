@@ -10,7 +10,8 @@ public class EchoController extends ControlContainer {
 	
 	public EchoController( IControlContainer container ) {
 		super(container);
-		this.setTemplateName("MagnEchos");
+		//this.setTemplateName("MagnEchos");
+		this.setTemplateName("EchoController");
 		ScrollingListOfEchos listOfEchos = new ScrollingListOfEchos(this,"contentContainer");
 	}
 	

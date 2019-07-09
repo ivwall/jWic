@@ -1,26 +1,49 @@
-
-<table cellspacing="0" cellpadding="0" width="100%">
-	<tr>
-		<td valign="top" width="50%">
-			
-			$insert.control("group1")
-
-		</td>
-		<td valign="top" width="50%">
-			 <table border="0">
-			 	<tr>
-			 		<td>Width:</td>
-					<td>$insert.control("lbWidth")</td>
-			 	</tr>
-			 	<tr>
-			 		<td>Height:</td>
-					<td>$insert.control("lbHeight")</td>
-			 	</tr>
-			 	<tr>
-			 		<td></td>
-					<td>$insert.control("btVisibility")</td>
-			 	</tr>
+<div id="maincontainer">
+  <div id="topsection_wrapper">
+    <div id="topsection">
+        <div id="topsection_top_row">
+        
+			<table>
+				<tr>
+					<td><img src="$jwic.linkResource($control.sessionContext.application, "jwic_logo.gif")"></td>
+					<td><h3>Magnetic Echos</h3></td>
+				</tr>
 			</table>
-		</td>
-	</tr>
-</table>
+          
+        </div>
+        <div id="topsection_bottom_row">
+	      <div id="menu">
+	      
+          </div>
+        </div>
+    </div>
+  </div>
+  <div id="contentwrapper">
+
+	<table cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+			<td valign="top" width="50%">
+				
+				$insert.control("group1")
+	
+			</td>
+			<td valign="top" width="50%">
+				 <table border="0">
+					<tr>
+						<td>Width:</td>
+						<td>$insert.control("lbWidth")</td>
+					</tr>
+					<tr>
+						<td>Height:</td>
+						<td>$insert.control("lbHeight")</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>$insert.control("btVisibility")</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+			
+</div>
