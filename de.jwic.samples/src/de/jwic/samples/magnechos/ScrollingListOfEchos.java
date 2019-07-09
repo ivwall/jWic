@@ -37,22 +37,29 @@ public class ScrollingListOfEchos extends ControlContainer {
 		group.setTemplateName(getClass().getName() + "_group");
 		
 		TableLayoutContainer tlc = new TableLayoutContainer(group, "table");
-		tlc.setColumnCount(2);
-		//tlc.setColumnCount(2);
+		tlc.setColumnCount(1);
 		
+		
+		String audio_title = "1987-edification";
+		String audio_speaker = "Ray Mellilow";
 		AudioButton aButton01 = new AudioButton(tlc);
-		aButton01.setTitle("tape two");
-		//aButton01.setAudioLink("\"http://localhost:8080/amp3s/1987-edification.mp3\"");
-		aButton01.setAudioLink("http://localhost:8080/amp3s/1987-edification.mp3");
+		aButton01.setTitle(audio_speaker+" : "+audio_title);
+		aButton01.setAudioLink("http://localhost:8080/amp3s/"+audio_title+".mp3");
 		aButton01.requireRedraw();
-		aButton01.addSelectionListener(new SelectionListener() {
-			public void objectSelected(SelectionEvent event) {
-				System.out.println("button 2 Mechos01.objectSelected event "+event.toString());
-				//playTape("\"http://localhost:8080/amp3s/1987-edification.mp3\"");
-				//echo.requireRedraw();
-			}
-		});
 		
+		audio_title = "jc-gooch-side-1";
+		audio_speaker = "John Crowe";
+		AudioButton aButton02 = new AudioButton(tlc);
+		aButton02.setTitle(audio_speaker+" : "+audio_title);
+		aButton02.setAudioLink("http://localhost:8080/amp3s/"+audio_title+".mp3");
+		aButton02.requireRedraw();
+		
+		audio_title = "jc-gooch-side-2";
+		audio_speaker = "John Crowe";
+		AudioButton aButton03 = new AudioButton(tlc);
+		aButton03.setTitle(audio_speaker+" : "+audio_title);
+		aButton03.setAudioLink("http://localhost:8080/amp3s/"+audio_title+".mp3");
+		aButton03.requireRedraw();
 		
 		return group;
 	}	
