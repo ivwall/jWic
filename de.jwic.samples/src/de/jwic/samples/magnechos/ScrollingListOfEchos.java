@@ -42,6 +42,9 @@ public class ScrollingListOfEchos extends ControlContainer {
 		
 		AudioButton aButton01 = new AudioButton(tlc);
 		aButton01.setTitle("tape two");
+		//aButton01.setAudioLink("\"http://localhost:8080/amp3s/1987-edification.mp3\"");
+		aButton01.setAudioLink("http://localhost:8080/amp3s/1987-edification.mp3");
+		aButton01.requireRedraw();
 		aButton01.addSelectionListener(new SelectionListener() {
 			public void objectSelected(SelectionEvent event) {
 				System.out.println("button 2 Mechos01.objectSelected event "+event.toString());
