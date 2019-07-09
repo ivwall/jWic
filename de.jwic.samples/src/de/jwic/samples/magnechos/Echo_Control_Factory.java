@@ -1,11 +1,12 @@
 package de.jwic.samples.magnechos;
 
 import de.jwic.samples.magnechos.IEchoController;
-//import de.jwic.samples.magnechos.EchoController;
 
 public class Echo_Control_Factory {
+	
 	public Echo_Control_Factory() {
 	}
+	
 	public IEchoController getEchoController( String className ) {
 		IEchoController controller = null;
 		try {
@@ -18,4 +19,5 @@ public class Echo_Control_Factory {
 		}
 		return controller;
 	}
+	
 }

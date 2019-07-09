@@ -14,8 +14,6 @@ import java.util.Iterator;
 
 public class MagnEchos extends Application {
 	
-	public String echoControllerClassName = 
-	                                 "de.jwic.samples.magnechos.EchoController";
 	public String echoWrapperClassName = 
 	                          "de.jwic.samples.magnechos.EchoControllerWrapper";
 	
@@ -38,7 +36,6 @@ public class MagnEchos extends Application {
 		IEchoController echoController = 
 		                  echoFactory.getEchoController( echoWrapperClassName );
 		
-		//echoController.init( echoController, "echoController");
 		echoController.init( page, "echoController");
 		
 		return page;

@@ -7,11 +7,9 @@ public class EchoControllerWrapper implements IEchoController {
 
 	private EchoController echoController;
 	
-	public EchoControllerWrapper () {
-	}
+	public EchoControllerWrapper () { }
 	
 	public void init ( IControlContainer container, String name ) {
-		//echoController = new EchoController( container, name );
 		echoController = new EchoController( container );
 	}
 	
@@ -22,4 +20,5 @@ public class EchoControllerWrapper implements IEchoController {
 	public void setName() { }
 	
 	public ControlContainer getControlContainer() { return echoController; }
+	
 }
