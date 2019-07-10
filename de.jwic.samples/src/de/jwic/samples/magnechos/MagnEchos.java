@@ -19,7 +19,7 @@ public class MagnEchos extends Application {
 	
 	public Control createRootControl(IControlContainer container) {
 		Page page = new Page(container);
-		page.setTitle("Magnetic Echos");
+		//page.setTitle("Magnetic Echos");
 		
 		SessionContext sc = this.getSessionContext();
 		HashMap initParams = (HashMap)sc.getInitParameters();
