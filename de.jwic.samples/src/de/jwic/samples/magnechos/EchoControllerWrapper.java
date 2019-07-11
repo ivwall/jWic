@@ -5,20 +5,20 @@ import de.jwic.base.IControlContainer;
 
 public class EchoControllerWrapper implements IEchoController {
 
-	private EchoController echoController;
+	private ScrollingListOfEchos scrollingList;
 	
 	public EchoControllerWrapper () { }
 	
 	public void init ( IControlContainer container, String name ) {
-		echoController = new EchoController( container );
+		scrollingList = new ScrollingListOfEchos( container );
 	}
 	
-	public void reset() { echoController.reset(); }
+	public void reset() { scrollingList.reset(); }
 	
-	public void destroy() { echoController.destroy(); }
+	public void destroy() { scrollingList.destroy(); }
 	
 	public void setName() { }
 	
-	public ControlContainer getControlContainer() { return echoController; }
+	public ControlContainer getControlContainer() { return scrollingList; }
 	
 }

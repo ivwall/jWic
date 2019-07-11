@@ -62,5 +62,8 @@ public class ScrollingListOfEchos extends ControlContainer {
 		aButton03.requireRedraw();
 		
 		return group;
-	}	
+	}
+	
+	public void reset() {}
+	public void destory() {}
 }
