@@ -45,6 +45,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import javax.servlet.http.Cookie;
+import java.util.Enumeration;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.velocity.Template;
@@ -1081,9 +1084,30 @@ public class WebEngine  {
 			System.out.println("   http request getAuthType() "+req.getAuthType());
 			System.out.println("             getContextPath() "+req.getContextPath());
 			System.out.println("                 getCookies() "+"tbd");
+			try {
+				Cookie[] cookies = req.getCookies();
+				for (int x = 0; x <= cookies.length - 1; x++){
+					System.out.println(cookies[x].getName()+" : "+
+						                             cookies[x].getValue());
+				}
+			} catch (Exception e1 ) {
+				System.out.println(e1.toString());
+			}
 			System.out.println("        getDateHeader( name ) "+"tbd");
 			System.out.println("            getHeader( name ) "+"tbd");
 			System.out.println("            getHeaderNames( ) "+"tbd");
+			try {
+				Enumeration headerNames = req.getHeaderNames();
+				String header = "not set";
+				String value  = "not set";
+				while ( headerNames.hasMoreElements()) {
+					header = (String)headerNames.nextElement();
+					value  = req.getHeader(header);
+					System.out.println("  "+header+" : "+value);
+				}
+			} catch(Exception e2) {
+				System.out.println(e2.toString());
+			}
 			System.out.println("           getHeaders( name ) "+"tbd");
 			System.out.println("         getIntHeader( name ) "+"tbd");
 			System.out.println("                  getMethod() "+req.getMethod());
