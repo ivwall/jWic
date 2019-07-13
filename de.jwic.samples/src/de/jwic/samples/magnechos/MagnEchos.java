@@ -19,7 +19,6 @@ public class MagnEchos extends Application {
 	
 	public Control createRootControl(IControlContainer container) {
 		Page page = new Page(container);
-		//page.setTitle("Magnetic Echos");
 		
 		SessionContext sc = this.getSessionContext();
 		HashMap initParams = (HashMap)sc.getInitParameters();
@@ -30,6 +29,7 @@ public class MagnEchos extends Application {
 			String[] kValue = (String[])initParams.get(key);
 			System.out.println(" key("+key+") name[0]"+kValue[0]);
 		}
+		System.out.println("sc.getCallBackUR() "+sc.getCallBackURL());
 		
 		Echo_Control_Factory echoFactory = new Echo_Control_Factory();
 		

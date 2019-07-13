@@ -277,7 +277,12 @@ public class WebEngine  {
 	 * @param res
 	 */
 	public void handleRequest(HttpServletRequest req, HttpServletResponse res, Upload upload) {
-
+		
+		
+		//System.out.println("WebEngine.handlerequest req.toString()"+req.toString());
+		//writeHttpServletReq( req );
+		writeHttpServletReq("WebEngine.handlerequest", req);
+		
 		servletContainerFixes(req, res);
 		long start = System.currentTimeMillis();
     	boolean resourceMode = "1".equals(req.getParameter(IResourceControl.URL_RESOURCE_PARAM));
@@ -975,6 +980,10 @@ public class WebEngine  {
 	 * @return
 	 */
 	private String getFileName(HttpServletRequest req) {
+
+		System.out.println("WebEngine getFileName ");
+		//writeHttpServletReq( req );
+		
 		String path = req.getServletPath();
 		int i = path.lastIndexOf('/'); 
 		if (i != -1) {
@@ -1048,4 +1057,55 @@ public class WebEngine  {
 			}
 		}
 	}
+	
+	
+	//--------------------------------------------------------------------------
+	
+	private void writeHttpServletReq(HttpServletRequest req) {
+		try {                                                  
+			System.out.println("http request getContextPath() "+req.getContextPath());
+			System.out.println("             getServletPath() "+req.getServletPath());
+		} catch( Exception ex ) {
+			//printStackTrace( ex );
+		}
+	}
+	
+	
+	//--------------------------------------------------------------------------
+	
+	private void writeHttpServletReq(String fromMeth, HttpServletRequest req) {
+		try {
+			System.out.println("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv");
+			System.out.println();
+			System.out.println("                    in method "+fromMeth);               
+			System.out.println("   http request getAuthType() "+req.getAuthType());
+			System.out.println("             getContextPath() "+req.getContextPath());
+			System.out.println("                 getCookies() "+"tbd");
+			System.out.println("        getDateHeader( name ) "+"tbd");
+			System.out.println("            getHeader( name ) "+"tbd");
+			System.out.println("            getHeaderNames( ) "+"tbd");
+			System.out.println("           getHeaders( name ) "+"tbd");
+			System.out.println("         getIntHeader( name ) "+"tbd");
+			System.out.println("                  getMethod() "+req.getMethod());
+			System.out.println("              getPart( name ) "+"tbd");
+			System.out.println("             getParts( name ) "+"tbd");
+			System.out.println("                getPathInfo() "+req.getPathInfo());
+			System.out.println("          getPathTranslated() "+req.getPathTranslated());
+			System.out.println("             getQueryString() "+req.getQueryString());
+			System.out.println("              getRemoteUser() "+req.getRemoteUser());
+			System.out.println("      getRequestedSessionId() "+req.getRequestedSessionId());
+			System.out.println("            getRequestedURI() "+req.getRequestURI());
+			System.out.println("            getRequestedURL() "+req.getRequestURL());
+			System.out.println("         getIntHeader( name ) "+"tbd");
+			System.out.println("             getContextPath() "+req.getContextPath());
+			System.out.println("             getServletPath() "+req.getServletPath());
+			System.out.println();
+			System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");               
+			System.out.println();
+		} catch( Exception ex ) {
+			//printStackTrace( ex );
+		}
+	}
+	
+	
 }
