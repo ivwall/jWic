@@ -1087,8 +1087,9 @@ public class WebEngine  {
 			try {
 				Cookie[] cookies = req.getCookies();
 				for (int x = 0; x <= cookies.length - 1; x++){
-					System.out.println(cookies[x].getName()+" : "+
-						                             cookies[x].getValue());
+					System.out.println("                 "+
+						                     cookies[x].getName()+" : "+
+						                                 cookies[x].getValue());
 				}
 			} catch (Exception e1 ) {
 				System.out.println(e1.toString());
