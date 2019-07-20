@@ -50,38 +50,6 @@ public class ScrollingListOfEchos extends ControlContainer {
 		TableLayoutContainer tlc = new TableLayoutContainer(group, "table");
 		tlc.setColumnCount(1);
 		
-		
-		System.out.println(">>>  pull list of mp3 ....  <<<");
-		System.out.println(">>>  pull list from where ....  <<<");
-		System.out.println(">>>  a json list ....  <<<");
-		System.out.println(">>>  how to correlate list with user actions  <<<");
-		System.out.println(">>>  .......................................  <<<");
-		System.out.println(">>>  Make an HTTP GET request ????            <<<");
-		System.out.println(">>>  to get the list to create the buttins    <<<");
-		
-		
-		String audio_title = "1987-edification";
-		String audio_speaker = "Ray Mellilow";
-		AudioButton aButton01 = new AudioButton(tlc);
-		aButton01.setTitle(audio_speaker+" : "+audio_title);
-		aButton01.setAudioLink("http://localhost:8080/amp3s/"+audio_title+".mp3");
-		aButton01.requireRedraw();
-		
-		audio_title = "jc-gooch-side-1";
-		audio_speaker = "John Crowe";
-		AudioButton aButton02 = new AudioButton(tlc);
-		aButton02.setTitle(audio_speaker+" : "+audio_title);
-		aButton02.setAudioLink("http://localhost:8080/amp3s/"+audio_title+".mp3");
-		aButton02.requireRedraw();
-		
-		audio_title = "jc-gooch-side-2";
-		audio_speaker = "John Crowe";
-		AudioButton aButton03 = new AudioButton(tlc);
-		aButton03.setTitle(audio_speaker+" : "+audio_title);
-		aButton03.setAudioLink("http://localhost:8080/amp3s/"+audio_title+".mp3");
-		aButton03.requireRedraw();
-		
-		
 		try {
 		  String url = "http://localhost:8080/amp3s/amp3s-list2.json";
 		  URL obj = new URL(url);
@@ -93,28 +61,22 @@ public class ScrollingListOfEchos extends ControlContainer {
 		  new InputStreamReader(con.getInputStream()));
 		  String inputLine;
 		  StringBuffer response = new StringBuffer();
-		   while ((inputLine = in.readLine()) != null) {
-			 response.append(inputLine);
-		   } in .close();
-		   //print in String
+		    while ((inputLine = in.readLine()) != null) {
+			  response.append(inputLine);
+		    } in .close();
+		    //print in String
 		    System.out.println(response.toString());
-		   JSONObject myresponse = new JSONObject(response.toString());
-		   
+		    JSONObject myresponse = new JSONObject(response.toString());
 		   
 			JSONArray arr = myresponse.getJSONArray("echo-list");
 			
-			
-			//AudioButton[] arrayOButtons = new AudioButton(tlc)[arr.length()];
 			AudioButton[] arrayOButtons = new AudioButton[arr.length()];
-			
-			
 			
 			for (int i = 0; i < arr.length(); i++) {
 				System.out.println(" " + arr.get(i));
 				arrayOButtons[i] = new AudioButton(tlc);
 				arrayOButtons[i].setTitle(""+arr.get(i));
 				arrayOButtons[i].setAudioLink("http://localhost:8080/amp3s/"+arr.get(i));
-				
 			}		   
 		   
 		} catch(Exception e) {
