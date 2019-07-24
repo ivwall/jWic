@@ -53,7 +53,7 @@ public class ScrollingListOfEchos extends ControlContainer {
 		try {
 		  String url = "http://localhost:8080/amp3s/amp3s-list2.json";
 		  URL obj = new URL(url);
-		  HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+		  HttpURLConnection con = (HttpURLConnection)obj.openConnection();
 		  int responseCode = con.getResponseCode();
 		  System.out.println("\nSending 'GET' request to URL : " + url);
 		  System.out.println("Response Code : " + responseCode);

@@ -12,6 +12,8 @@ import java.util.HashMap;
 import java.util.Set;
 import java.util.Iterator;
 
+import de.jwic.base.JWicRuntime;
+
 public class MagnEchos extends Application {
 	
 	public String echoWrapperClassName = 
@@ -19,6 +21,17 @@ public class MagnEchos extends Application {
 	
 	public Control createRootControl(IControlContainer container) {
 		Page page = new Page(container);
+		
+		
+		try {
+		
+			//JWicRuntime jWic = JWicRuntime.getSessionManager();
+			JWicRuntime jWic = JWicRuntime.getJWicRuntime();
+			System.out.println("jWicRuntime context path = "+jWic.getContextPath());
+		
+		} catch( Exception ex) {
+			ex.toString();
+		}
 		
 		SessionContext sc = this.getSessionContext();
 		HashMap initParams = (HashMap)sc.getInitParameters();
