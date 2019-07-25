@@ -253,6 +253,11 @@ public class JWicRuntime {
 		log.debug("creating new SessionContext for application '" + appSetup.getName() + "'.");
 		
 		SessionContext sc = new SessionContext(appSetup, locale, timeZone);
+		
+		System.out.println(" vvvvvvv fails build here vvvvvvvvvvvvvvvvvvvv");
+		//sc.setURI(request.getRequestURI());
+		
+		
 		String clientID;
 		if (request != null) {
 			clientID = request.getSession().getId();
@@ -266,6 +271,7 @@ public class JWicRuntime {
 
 		IApplication app = appSetup.createApplication();
 		sc.setApplication(app);
+		
 		SessionContainer container = sessionManager.create(clientID, appSetup.getName());
 		boolean cleanUp = true;
 		try {
@@ -274,6 +280,11 @@ public class JWicRuntime {
 			sc.setUserAgent(new UserAgentInfo(request));
 
 			app.initialize(sc);
+			System.out.println("");
+			System.out.println("");
+			System.out.println("Control root = app.createRootControl(sc);");
+			System.out.println("");
+			System.out.println("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv");
 			Control root = app.createRootControl(sc);
 			// push root control only if no control had been push during root creation
 			if (sc.getTopControl() == null) {

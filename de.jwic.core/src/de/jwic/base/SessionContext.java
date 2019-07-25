@@ -80,6 +80,8 @@ public class SessionContext implements IControlContainer, Serializable {
 	
 	private String themeName = "default";
 	
+	private String uri = "notset";
+	
 	private Map<String, String[]> initParameter = null;
 	private List<SessionListener> listeners = null;
 	private long requestTicket = 0;
@@ -861,6 +863,14 @@ public class SessionContext implements IControlContainer, Serializable {
 	public void setThemeName(String themeName) {
 		this.themeName = themeName;
 		setRequireRedraw(true);
+	}
+	
+	
+	public String getURI() {
+		return uri;
+	}
+	public void setURI(String uriStr) {
+		this.uri = uriStr;
 	}
 
 }

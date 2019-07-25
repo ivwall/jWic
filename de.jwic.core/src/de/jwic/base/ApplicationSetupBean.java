@@ -38,6 +38,9 @@ public class ApplicationSetupBean implements IApplicationSetup {
 	private boolean useAjaxRendering = true;
 	private Properties properties = new Properties();
 	
+	
+	
+	
 	/* (non-Javadoc)
 	 * @see de.jwic.base.IApplicationSetup#getName()
 	 */
@@ -131,6 +134,11 @@ public class ApplicationSetupBean implements IApplicationSetup {
 		if (properties == null) {
 			properties = new Properties();
 		}
+		
+		
+		System.out.println("ApplicationSetupBean.setProperty key( "+key+" ) value( "+value+" )");
+		
+		
 		properties.setProperty(key, value);
 	}
 	/**
@@ -202,4 +210,5 @@ public class ApplicationSetupBean implements IApplicationSetup {
 	public void setClassname(String classname) {
 		this.classname = classname;
 	}
+	
 }
