@@ -27,22 +27,37 @@ import java.util.HashMap;
 
 public class ScrollingListOfEchos extends ControlContainer {
 	
+	private String listener = "not set";
 	private ScrollableContainer container;
 	
 	public ScrollingListOfEchos( IControlContainer container ) {
 		this( container, null );
+		System.out.println("ScrollingListOfEchos( IControlContainer container )");
 	}
 	
 	public ScrollingListOfEchos( IControlContainer parent, String name ) {
 		super( parent, name );
-		
+		System.out.println("ScrollingListOfEchos( IControlContainer parent, String name )");
+		if (name == null){
+			System.out.println("           name = null");
+		}else{
+			System.out.println("           name = "+name);
+		}
+		//container = createDemoContent("group1");
+		//container.setWidth("300px");
+		//container.setHeight("150px");
+	}
+	
+	public void deployContent() {
 		container = createDemoContent("group1");
 		container.setWidth("300px");
 		container.setHeight("150px");
-		
 	}
 	
 	private ScrollableContainer createDemoContent(String name) {
+		
+		System.out.println("ScrollingListOfEchos.createDemoContent listener = "+listener);
+		
 		
 		ScrollableContainer group = new ScrollableContainer(this, name);
 		group.setTemplateName(getClass().getName() + "_group");
@@ -88,4 +103,7 @@ public class ScrollingListOfEchos extends ControlContainer {
 	
 	public void reset() {}
 	public void destory() {}
+	public void setName( String user ) {
+		listener = user;
+	}
 }

@@ -10,7 +10,7 @@ public class Echo_Control_Factory {
 	public IEchoController getEchoController( String className ) {
 		IEchoController controller = null;
 		try {
-			System.out.println("-----> Echo Control Factory ");
+			//System.out.println("-----> Echo Control Factory ");
 			Class classObject = Class.forName( className );
 			Object objectInstance = classObject.newInstance();
 			controller = (IEchoController)objectInstance;

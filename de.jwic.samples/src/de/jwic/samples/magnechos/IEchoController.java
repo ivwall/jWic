@@ -7,6 +7,6 @@ public interface IEchoController {
 	public void init( IControlContainer container, String Name );
 	public void reset();
 	public void destroy();
-	public void setName(); // i.e. the listener profile
+	public void setName( String user ); // i.e. the listener profile
 	public ControlContainer getControlContainer();
 }

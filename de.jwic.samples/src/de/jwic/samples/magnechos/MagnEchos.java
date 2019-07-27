@@ -48,7 +48,8 @@ public class MagnEchos extends Application {
 		IEchoController echoWrapper = 
 		                  echoFactory.getEchoController( echoWrapperClassName );
 		
-		echoWrapper.init( page, "echoController");
+		//echoWrapper.init( page, "echoController");
+		echoWrapper.init( page, sc.getURI() );
 		
 		return page;
 	}
