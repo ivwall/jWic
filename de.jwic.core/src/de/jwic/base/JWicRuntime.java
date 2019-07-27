@@ -255,7 +255,16 @@ public class JWicRuntime {
 		SessionContext sc = new SessionContext(appSetup, locale, timeZone);
 		
 		System.out.println(" vvvvvvv fails build here vvvvvvvvvvvvvvvvvvvv");
-		//sc.setURI(request.getRequestURI());
+		try {
+			System.out.println(" A");
+			System.out.println(" request.getRequestURI = "+request.getRequestURI());
+			System.out.println(" B");
+		    sc.setURI(request.getRequestURI());
+		} catch( Exception ex ) {
+			System.out.println(" C");
+			System.out.println("jWicRuntion.setupSessionContext "+ex.toString());
+		}
+		System.out.println(" D");
 		
 		
 		String clientID;

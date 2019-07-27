@@ -22,18 +22,15 @@ public class MagnEchos extends Application {
 	public Control createRootControl(IControlContainer container) {
 		Page page = new Page(container);
 		
-		
 		try {
-		
-			//JWicRuntime jWic = JWicRuntime.getSessionManager();
 			JWicRuntime jWic = JWicRuntime.getJWicRuntime();
 			System.out.println("jWicRuntime context path = "+jWic.getContextPath());
-		
 		} catch( Exception ex) {
 			ex.toString();
 		}
 		
 		SessionContext sc = this.getSessionContext();
+		/******
 		HashMap initParams = (HashMap)sc.getInitParameters();
 		Set keys = initParams.keySet();
 		System.out.println("-----.  session context key count "+keys.size());
@@ -43,6 +40,8 @@ public class MagnEchos extends Application {
 			System.out.println(" key("+key+") name[0]"+kValue[0]);
 		}
 		System.out.println("sc.getCallBackUR() "+sc.getCallBackURL());
+		*******/
+		System.out.println("sc.getURI "+sc.getURI());
 		
 		Echo_Control_Factory echoFactory = new Echo_Control_Factory();
 		
@@ -53,5 +52,4 @@ public class MagnEchos extends Application {
 		
 		return page;
 	}
-	
 }
