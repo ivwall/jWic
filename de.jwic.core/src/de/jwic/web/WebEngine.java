@@ -281,10 +281,7 @@ public class WebEngine  {
 	 */
 	public void handleRequest(HttpServletRequest req, HttpServletResponse res, Upload upload) {
 		
-		
-		//System.out.println("WebEngine.handlerequest req.toString()"+req.toString());
-		//writeHttpServletReq( req );
-		writeHttpServletReq("WebEngine.handlerequest", req);
+		//writeHttpServletReq("WebEngine.handlerequest", req);
 		
 		servletContainerFixes(req, res);
 		long start = System.currentTimeMillis();

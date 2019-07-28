@@ -253,19 +253,17 @@ public class JWicRuntime {
 		log.debug("creating new SessionContext for application '" + appSetup.getName() + "'.");
 		
 		SessionContext sc = new SessionContext(appSetup, locale, timeZone);
-		
-		System.out.println(" vvvvvvv fails build here vvvvvvvvvvvvvvvvvvvv");
+
+		//***********
+		// mvn package fails when this line doesn't have an expecption block.
+		// otherwise it works as expected.  MVN forces code structure.
+		// But moving on to solve THE problem.
 		try {
-			System.out.println(" A");
-			System.out.println(" request.getRequestURI = "+request.getRequestURI());
-			System.out.println(" B");
 		    sc.setURI(request.getRequestURI());
 		} catch( Exception ex ) {
-			System.out.println(" C");
 			System.out.println("jWicRuntion.setupSessionContext "+ex.toString());
 		}
-		System.out.println(" D");
-		
+		//***************
 		
 		String clientID;
 		if (request != null) {
@@ -289,11 +287,6 @@ public class JWicRuntime {
 			sc.setUserAgent(new UserAgentInfo(request));
 
 			app.initialize(sc);
-			System.out.println("");
-			System.out.println("");
-			System.out.println("Control root = app.createRootControl(sc);");
-			System.out.println("");
-			System.out.println("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv");
 			Control root = app.createRootControl(sc);
 			// push root control only if no control had been push during root creation
 			if (sc.getTopControl() == null) {

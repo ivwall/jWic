@@ -88,9 +88,7 @@ public class DispatcherServlet extends HttpServlet implements IApplicationSetupP
 	protected void service(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
 
-		System.out.println("DispatcherServlet.service req.toString()"+req.toString());
-
-
+		//System.out.println("DispatcherServlet.service req.toString()"+req.toString());
 		// invoke all configured interceptors
 		if (interceptors != null) {
 			for (int i = 0; i < interceptors.length; i++) {
@@ -133,8 +131,7 @@ public class DispatcherServlet extends HttpServlet implements IApplicationSetupP
 	 */
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 	    
-		System.out.println("DispatcherServlet.doGet req.toString()"+req.toString());
-		
+		//System.out.println("DispatcherServlet.doGet req.toString()"+req.toString());
 		log.debug("incoming GET request: " + req.getRequestURI());
 	    try {
 	    	
@@ -315,7 +312,5 @@ public class DispatcherServlet extends HttpServlet implements IApplicationSetupP
 		}
 		return new XmlApplicationSetup(in);
 	}
-
-	
 
 }
