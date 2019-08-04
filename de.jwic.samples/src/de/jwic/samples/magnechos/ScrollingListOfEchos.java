@@ -48,7 +48,6 @@ public class ScrollingListOfEchos extends ControlContainer {
 		
 		System.out.println("ScrollingListOfEchos.createDemoContent listener = "+listener);
 		
-		
 		ScrollableContainer group = new ScrollableContainer(this, name);
 		group.setTemplateName(getClass().getName() + "_group");
 		
