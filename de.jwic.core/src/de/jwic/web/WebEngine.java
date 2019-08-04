@@ -281,7 +281,7 @@ public class WebEngine  {
 	 */
 	public void handleRequest(HttpServletRequest req, HttpServletResponse res, Upload upload) {
 		
-		//writeHttpServletReq("WebEngine.handlerequest", req);
+		writeHttpServletReq("WebEngine.handlerequest", req);
 		
 		servletContainerFixes(req, res);
 		long start = System.currentTimeMillis();
@@ -981,8 +981,8 @@ public class WebEngine  {
 	 */
 	private String getFileName(HttpServletRequest req) {
 
-		System.out.println("WebEngine getFileName ");
-		//writeHttpServletReq( req );
+		//System.out.println("WebEngine getFileName ");
+		writeHttpServletReq("WebEngine getFileName ", req );
 		
 		String path = req.getServletPath();
 		int i = path.lastIndexOf('/'); 
