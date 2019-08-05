@@ -22,12 +22,6 @@ public class MagnEchos extends Application {
 	public Control createRootControl(IControlContainer container) {
 		Page page = new Page(container);
 		
-		//try {
-		//	JWicRuntime jWic = JWicRuntime.getJWicRuntime();
-		//} catch( Exception ex) {
-		//	ex.toString();
-		//}
-		
 		SessionContext sc = this.getSessionContext();
 		
 		Echo_Control_Factory echoFactory = new Echo_Control_Factory();
