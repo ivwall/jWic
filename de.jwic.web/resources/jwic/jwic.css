@@ -403,7 +403,11 @@ div.j-toolbar div.j-combo {
 	display: inline;
 	line-height: 15px;
 	padding: 0px;
-	height: 22px;
+	/**
+	* will it change the mobile size
+	* height: 22px;
+	*/
+	height: 88px;
 	position: relative;
 	cursor: pointer;
 	text-align: center;
@@ -421,7 +425,10 @@ div.j-toolbar div.j-combo {
 	padding-bottom: 0px;
 	display: inline;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+	/**
+	* font-size: 12px;
+	*/
+	font-size: 24px;
 
 }
 .j-button-text-only {
