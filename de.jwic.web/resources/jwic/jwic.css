@@ -397,6 +397,9 @@ div.j-toolbar div.j-combo {
  * Buttons 
  */
 .j-button  {
+	/**
+	*font-size: 12px;
+	*/
 	font-size: 12px;
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 1px;

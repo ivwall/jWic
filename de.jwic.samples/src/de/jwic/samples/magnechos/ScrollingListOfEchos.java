@@ -46,8 +46,8 @@ public class ScrollingListOfEchos extends ControlContainer {
 		// Based on the browser, change these values
 		//
 		//
-		container.setWidth("500px");
-		container.setHeight("400px");
+		container.setWidth("700px");
+		container.setHeight("1400px");
 	}
 	
 	private ScrollableContainer createDemoContent(String name) {
