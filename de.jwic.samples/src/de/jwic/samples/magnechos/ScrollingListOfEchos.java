@@ -62,7 +62,7 @@ public class ScrollingListOfEchos extends ControlContainer {
 		
 		try {
 		  //String url = "http://localhost:8080/amp3s/amp3s-list2.json";
-		  String url = "http://localhost:8080/01-amp3s/01-amp3s.json";
+		  String url = "http://173.166.130.93:8080/01-amp3s/01-amp3s.json";
 		  URL obj = new URL(url);
 		  HttpURLConnection con = (HttpURLConnection)obj.openConnection();
 		  int responseCode = con.getResponseCode();

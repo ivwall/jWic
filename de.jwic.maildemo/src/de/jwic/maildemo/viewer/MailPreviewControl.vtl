@@ -1,9 +1,0 @@
-#if($control.message)
-#if ($control.message.contentType == "text/plain")
-<p class="mailText">$jwic.formatHtml($control.message.message)</p>
-#else
-$control.message.message
-#end
-#else
-<p align="center">- select a mail for preview -</p>
-#end
