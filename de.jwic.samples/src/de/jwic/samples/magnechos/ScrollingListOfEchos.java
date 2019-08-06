@@ -87,7 +87,7 @@ public class ScrollingListOfEchos extends ControlContainer {
 				System.out.println(" " + arr.get(i));
 				arrayOButtons[i] = new AudioButton(tlc);
 				arrayOButtons[i].setTitle(""+arr.get(i));
-				arrayOButtons[i].setAudioLink("http://173.166.130.93:8080/01-amp3s/"+arr.get(i));
+				arrayOButtons[i].setAudioLink("http://localhost:8080/01-amp3s/"+arr.get(i));
 			}		   
 		   
 		} catch(Exception e) {
