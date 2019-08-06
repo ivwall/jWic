@@ -524,7 +524,7 @@
 		<module>de.jwic.web</module>
 
 		<module>de.jwic.samples</module>
-		<module>de.jwic.maildemo</module>
+		<!--module>de.jwic.maildemo</module-->
 		<module>de.jwic.sourceviewer</module>
 	</modules>
 
@@ -553,13 +553,13 @@
 				<jwicUpdateVersion>5.2.1-SNAPSHOT</jwicUpdateVersion>
 			</properties>
 		</profile>
-		<profile>
+		<!--profile>
 			<id>update-maildemo</id>
 			<properties>
 				<jwicUpdateApplication>de.jwic.maildemo</jwicUpdateApplication>
 				<jwicUpdateVersion>5.2.1-SNAPSHOT</jwicUpdateVersion>
 			</properties>
-		</profile>
+		</profile-->
 		<profile>
 			<id>update-sourceviewer</id>
 			<properties>
