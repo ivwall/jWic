@@ -2,7 +2,7 @@ package de.jwic.samples.magnechos;
 
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
-import de.jwic.controls.Button;
+//import de.jwic.controls.Button;
 import de.jwic.controls.InputBox;
 import de.jwic.controls.LabelControl;
 import de.jwic.controls.ListBoxControl;
