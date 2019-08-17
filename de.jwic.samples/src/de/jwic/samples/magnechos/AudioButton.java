@@ -13,15 +13,15 @@ import de.jwic.controls.SelectableControl;
 
 
 /**
- * Represents the &lt;button&gt; html element. A button displays text and/or
- * an image. 
+ * Represents the &lt;button&gt; html element. 
+ * This button displays links to an audio, and - future - video file.
  * 
- * The button is using the jQuery UI button element for representation by default. It is
- * however possible, to switch back to the old jWic 4.x design by setting the templateName
- * to "de.jwic.controls.ButtonLegacy".
+ * The button is using the jQuery UI button element for representation by default. 
+ * It is however possible, to switch back to the old jWic 4.x design by setting 
+ * the templateName to "de.jwic.controls.ButtonLegacy".
  *  
- * @author Florian Lippisch
- * @version $Revision: 1.3 $
+ * @author Hank Greene
+ * @version $Revision: 0.1 $
  */
 @JavaScriptSupport
 public class AudioButton extends SelectableControl {

@@ -24,6 +24,7 @@ import java.net.URL;
 import java.util.Map;
 import java.util.HashMap;
 
+import de.jwic.events.SelectionListener;
 
 public class ScrollingListOfEchos extends ControlContainer {
 	
@@ -86,6 +87,7 @@ public class ScrollingListOfEchos extends ControlContainer {
 			for (int i = 0; i < arr.length(); i++) {
 				System.out.println(" " + arr.get(i));
 				arrayOButtons[i] = new AudioButton(tlc);
+				//arrayOButtons[i].addSelectionListener();
 				arrayOButtons[i].setTitle(""+arr.get(i));
 				arrayOButtons[i].setAudioLink("http://localhost:8080/01-amp3s/"+arr.get(i));
 			}		   
