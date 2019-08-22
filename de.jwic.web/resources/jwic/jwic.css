@@ -405,14 +405,16 @@ div.j-toolbar div.j-combo {
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 1px;
 	display: inline;
-	line-height: 15px;
+	/**line-height: 15px;**/
+	line-height: 60px;
 	padding: 0px;
 	/**
 	* $$$$$!!! search sting to find ths spot
 	* will it change the mobile size
 	* height: 22px;
 	*/
-	height: 22px;
+	/**height: 22px;**/
+	height: 58px;
 	position: relative;
 	cursor: pointer;
 	text-align: center;
