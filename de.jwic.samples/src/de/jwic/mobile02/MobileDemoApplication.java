@@ -13,6 +13,7 @@ import de.jwic.mobile02.demos.FlipSwitchDemo;
 import de.jwic.mobile02.demos.InputDemo;
 import de.jwic.mobile02.demos.RadioButtonDemo;
 import de.jwic.mobile02.demos.SelectMenuDemo;
+import de.jwic.mobile02.demos.SelectMenuDemo02;
 import de.jwic.mobile02.demos.TableDemo;
 import de.jwic.mobile02.demos.TabsDemo;
 
@@ -34,6 +35,7 @@ public class MobileDemoApplication extends Application {
 		mobileDemoModules.add(new TabsDemo());
 		mobileDemoModules.add(new ComboDemo());
 		mobileDemoModules.add(new SelectMenuDemo());
+		mobileDemoModules.add(new SelectMenuDemo02());
 		mobileDemoModules.add(new TableDemo());
 		/*
 		mobileDemoModules.add(new DatePickerDemo());
