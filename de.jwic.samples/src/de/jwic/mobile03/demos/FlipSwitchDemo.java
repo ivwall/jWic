@@ -4,12 +4,14 @@ import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 import de.jwic.controls.Label;
-import de.jwic.controls.mobile.MButton;
-import de.jwic.controls.mobile.MFlipSwitch;
+import de.jwic.controls.mobile03.MButton;
+import de.jwic.controls.mobile03.MFlipSwitch;
+
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
 import de.jwic.events.ValueChangedEvent;
 import de.jwic.events.ValueChangedListener;
+
 import de.jwic.mobile03.MobileDemoModule;
 
 /**
@@ -52,12 +54,6 @@ public class FlipSwitchDemo extends MobileDemoModule{
 				checkBox.setChecked(!checkBox.isChecked());
 			}
 		});
-
-		/*
-		final Label label2 = new Label(container, "label2");
-		label2.setText("A Flip Switch");
-		new MFlipSwitch(container, "flipSwitch");
-		*/
 
 		return container;
 	}
