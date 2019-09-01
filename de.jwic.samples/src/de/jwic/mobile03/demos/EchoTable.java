@@ -40,21 +40,17 @@ public class EchoTable extends MobileDemoModule {
 	private IAction flagRed;
 	private IAction flagBlue;
 	private IAction deleteTask;
-
-	
-	
-	
 	
 	@Override
 	public Control createPage(IControlContainer controlContainer) {
 		final ControlContainer container = new ControlContainer(controlContainer, "container");
 
-		/*****
 		final TableViewer table = new TableViewer(container, "table1");
 		DemoTaskContentProvider contentProvider = new DemoTaskContentProvider(createDemoData());
 		table.setContentProvider(contentProvider);
 		table.setTableLabelProvider(new LabelProvider());
 		table.setTableRenderer(new MobileTableRenderer());
+		/*****
 
 		TableModel model = table.getModel();
 
