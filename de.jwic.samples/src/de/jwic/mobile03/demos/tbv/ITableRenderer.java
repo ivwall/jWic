@@ -14,37 +14,17 @@
  * limitations under the License.
  *  
  *******************************************************************************/
+//package de.jwic.controls.tableviewer;
 package de.jwic.mobile03.demos.tbv;
 
-import java.io.Serializable;
+import de.jwic.base.RenderContext;
 
 /**
- * Represents a row in the demo tasklist. 
+ * Used to render the table.
+ * @author Florian Lippisch
  */
-public class DemoTask implements Serializable {
-	
-	private static int nextId = 0;
-	int id = nextId++; // unique id
-	public boolean done = false;
-	public String title = "";
-	String owner = "";
-	int completed = 0;
-	
-	/**
-	 * default constructor.
-	 */
-	public DemoTask() {
-		
-	}
-	/**
-	 * @param title
-	 * @param owner
-	 * @param completed
-	 */
-	public DemoTask(String title, String owner, int completed) {
-		super();
-		this.title = title;
-		this.owner = owner;
-		this.completed = completed;
-	}
+public interface ITableRenderer {
+
+	public void renderTable(RenderContext renderContext, TableViewer viewer, TableModel model, ITableLabelProvider tableLabelProvider);
+
 }

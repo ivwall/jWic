@@ -14,37 +14,47 @@
  * limitations under the License.
  *  
  *******************************************************************************/
+
+//package de.jwic.controls.tableviewer;
 package de.jwic.mobile03.demos.tbv;
 
-import java.io.Serializable;
-
 /**
- * Represents a row in the demo tasklist. 
+ * Created on Apr 12, 2007
+ * @author jbornema
  */
-public class DemoTask implements Serializable {
+public class RowContext {
 	
-	private static int nextId = 0;
-	int id = nextId++; // unique id
-	public boolean done = false;
-	public String title = "";
-	String owner = "";
-	int completed = 0;
+	private boolean expanded;
+	private int level;
 	
 	/**
-	 * default constructor.
+	 * 
 	 */
-	public DemoTask() {
-		
-	}
-	/**
-	 * @param title
-	 * @param owner
-	 * @param completed
-	 */
-	public DemoTask(String title, String owner, int completed) {
+	public RowContext() {
 		super();
-		this.title = title;
-		this.owner = owner;
-		this.completed = completed;
+	}
+
+	/**
+	 * Constructor.
+	 * @param expanded
+	 * @param level
+	 */
+	public RowContext(boolean expanded, int level) {
+		this.expanded = expanded;
+		this.level = level;
+	}
+	
+	/**
+	 * @return the expanded
+	 */
+	public boolean isExpanded() {
+		return expanded;
+	}
+	
+	/**
+	 * @return the level
+	 */
+	public int getLevel() {
+		return level;
 	}
 }

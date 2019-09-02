@@ -14,37 +14,28 @@
  * limitations under the License.
  *  
  *******************************************************************************/
+//package de.jwic.controls.tableviewer;
 package de.jwic.mobile03.demos.tbv;
 
 import java.io.Serializable;
 
 /**
- * Represents a row in the demo tasklist. 
+ * Provides label, image and style information for a specified cell by
+ * setting the values on a CellLabel object.
+ *  
+ * @author Florian Lippisch
  */
-public class DemoTask implements Serializable {
-	
-	private static int nextId = 0;
-	int id = nextId++; // unique id
-	public boolean done = false;
-	public String title = "";
-	String owner = "";
-	int completed = 0;
-	
+public interface ITableLabelProvider extends Serializable {
+
 	/**
-	 * default constructor.
+	 * Returns the CellLabel object that is used to render the content for the
+	 * specific object and column. A CellLabel object may contain text, image and
+	 * or style informations. 
+	 * 
+	 * @param row
+	 * @param column
+	 * @param rowContext
 	 */
-	public DemoTask() {
-		
-	}
-	/**
-	 * @param title
-	 * @param owner
-	 * @param completed
-	 */
-	public DemoTask(String title, String owner, int completed) {
-		super();
-		this.title = title;
-		this.owner = owner;
-		this.completed = completed;
-	}
+	public CellLabel getCellLabel(Object row, TableColumn column, RowContext rowContext);
+	
 }
