@@ -1,6 +1,6 @@
-package de.jwic.mobile03.demos;
+package de.jwic.mobile04.demos;
 
-import de.jwic.mobile03.MobileDemoModule;
+import de.jwic.mobile04.MobileDemoModule;
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
@@ -22,11 +22,11 @@ import de.jwic.controls.menu.Menu;
 //import de.jwic.controls.tableviewer.TableModelEvent;
 //import de.jwic.controls.tableviewer.TableViewer;
 
-import de.jwic.mobile03.demos.tbv.TableColumn;
-import de.jwic.mobile03.demos.tbv.TableModel;
-import de.jwic.mobile03.demos.tbv.TableModelAdapter;
-import de.jwic.mobile03.demos.tbv.TableModelEvent;
-import de.jwic.mobile03.demos.tbv.TableViewer;
+import de.jwic.mobile04.demos.tbv.TableColumn;
+import de.jwic.mobile04.demos.tbv.TableModel;
+import de.jwic.mobile04.demos.tbv.TableModelAdapter;
+import de.jwic.mobile04.demos.tbv.TableModelEvent;
+import de.jwic.mobile04.demos.tbv.TableViewer;
 
 import de.jwic.demo.ImageLibrary;
 import de.jwic.events.ElementSelectedEvent;
@@ -34,10 +34,10 @@ import de.jwic.events.ElementSelectedListener;
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
 
-import de.jwic.mobile03.demos.tbv.DemoTaskContentProvider;
-import de.jwic.mobile03.demos.tbv.DemoTask;
-import de.jwic.mobile03.demos.tbv.LabelProvider;
-import de.jwic.mobile03.demos.tbv.MobileTableRenderer;
+import de.jwic.mobile04.demos.tbv.DemoTaskContentProvider;
+import de.jwic.mobile04.demos.tbv.DemoTask;
+import de.jwic.mobile04.demos.tbv.LabelProvider;
+import de.jwic.mobile04.demos.tbv.MobileTableRenderer;
 
 import java.util.ArrayList;
 import java.util.List;
