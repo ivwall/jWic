@@ -28,8 +28,8 @@ public final class SelectMenuDemo04 extends MobileDemoModule {
 	/**
 	 * @param title
 	 */
-	public SelectMenuDemo03() {
-		super("SelectMenu Demo03");
+	public SelectMenuDemo04() {
+		super("SelectMenu Demo04");
 	}
 
 	/* (non-Javadoc)

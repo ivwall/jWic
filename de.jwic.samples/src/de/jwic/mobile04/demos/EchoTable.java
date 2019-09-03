@@ -6,6 +6,7 @@ import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 
 // from de.jwic.demo.tbv.BasicTBVDemo
+/****
 import de.jwic.base.ImageRef;
 import de.jwic.controls.Button;
 import de.jwic.controls.ToolBar;
@@ -15,13 +16,13 @@ import de.jwic.controls.actions.IAction;
 import de.jwic.controls.dialogs.DialogAdapter;
 import de.jwic.controls.dialogs.DialogEvent;
 import de.jwic.controls.menu.Menu;
-
+****/
 //import de.jwic.controls.tableviewer.TableColumn;
 //import de.jwic.controls.tableviewer.TableModel;
 //import de.jwic.controls.tableviewer.TableModelAdapter;
 //import de.jwic.controls.tableviewer.TableModelEvent;
 //import de.jwic.controls.tableviewer.TableViewer;
-
+/****
 import de.jwic.mobile04.demos.tbv.TableColumn;
 import de.jwic.mobile04.demos.tbv.TableModel;
 import de.jwic.mobile04.demos.tbv.TableModelAdapter;
@@ -29,11 +30,12 @@ import de.jwic.mobile04.demos.tbv.TableModelEvent;
 import de.jwic.mobile04.demos.tbv.TableViewer;
 
 import de.jwic.demo.ImageLibrary;
+***/
 import de.jwic.events.ElementSelectedEvent;
 import de.jwic.events.ElementSelectedListener;
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
-
+/***
 import de.jwic.mobile04.demos.tbv.DemoTaskContentProvider;
 import de.jwic.mobile04.demos.tbv.DemoTask;
 import de.jwic.mobile04.demos.tbv.LabelProvider;
@@ -41,7 +43,7 @@ import de.jwic.mobile04.demos.tbv.MobileTableRenderer;
 
 import java.util.ArrayList;
 import java.util.List;
-
+***/
 
 //public class EchoTable extends MobileDemoModule implements ElementSelectedListener {
 public class EchoTable extends MobileDemoModule implements ElementSelectedListener {
@@ -50,12 +52,12 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		super("Echo Table");
 	}
 	
-	private TableViewer viewer;
-	private DemoTaskContentProvider contentProvider;
+	//private TableViewer viewer;
+	//private DemoTaskContentProvider contentProvider;
 
-	private IAction flagRed;
-	private IAction flagBlue;
-	private IAction deleteTask;
+	//private IAction flagRed;
+	//private IAction flagBlue;
+	//private IAction deleteTask;
 
 	/****
 	private class DemoTableViewerListener implements ElementSelectedListener {
@@ -83,6 +85,7 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 	public Control createPage(IControlContainer controlContainer) {
 		container = new ControlContainer(controlContainer, "container");
 
+		/***
 		final TableViewer table = new TableViewer(container, "table1");
 		//DemoTaskContentProvider contentProvider = new DemoTaskContentProvider(createDemoData());
 		contentProvider = new DemoTaskContentProvider(createDemoData());
@@ -95,14 +98,14 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		model.setSelectionMode(TableModel.SELECTION_SINGLE);
 		model.setColumnBtnText("Columns Button");
 		createColumns(table);
-		/*****/
+		***/
 
 		return container;
 	}
 	
-	
+
 	public void elementSelected(ElementSelectedEvent event) {
-		
+	/******
 		if (event.getElement() == null) {
 			refreshActions(null);
 		} else {
@@ -114,12 +117,14 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 				}
 			}
 		}
+	********/
 	}
 		
 		
 	/**
 	 * @param task
 	 */
+	/*****
 	public void refreshActions(DemoTask task) {
 		
 		deleteTask.setEnabled(task != null);
@@ -127,11 +132,13 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		flagRed.setEnabled(task != null && !task.done);
 		
 	}
+	*******/
 	
 		
 	/**
 	 * @return
 	 */
+	/********
 	private List<DemoTask> createDemoData() {
 		List<DemoTask> data = new ArrayList<DemoTask>();
 		data.add(new DemoTask("Implement Demo", "Sam", 0));
@@ -143,7 +150,7 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		data.add(new DemoTask("Unknown", "", 0));
 		data.add(new DemoTask("Change default implementation", "Sam", 10));
 		data.add(new DemoTask("Evaluate library XYZ for relevance", "Mark", 50));
-		
+	****/
 		/****
 		for (int i = 1; i < 105; i++) {
 			DemoTask demoTask = new DemoTask();
@@ -154,12 +161,15 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 			data.add(demoTask);
 		}
 		*****/
+	/****
 		return data;
 	}
+	****/
 
 	/**
 	 * 
 	 */
+	/****
 	private void createColumns(TableViewer viewer) {
 
 		TableModel model = viewer.getModel();
@@ -185,5 +195,6 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		model.addColumn(col);
 
 	}
+	*****/
 	
 }
