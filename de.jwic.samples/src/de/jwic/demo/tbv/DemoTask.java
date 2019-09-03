@@ -27,8 +27,8 @@ public class DemoTask implements Serializable {
 	int id = nextId++; // unique id
 	public boolean done = false;
 	public String title = "";
-	String owner = "";
-	int completed = 0;
+	public String owner = "";
+	public int completed = 0;
 	
 	/**
 	 * default constructor.

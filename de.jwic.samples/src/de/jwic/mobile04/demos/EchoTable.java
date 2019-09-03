@@ -5,32 +5,6 @@ import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 
-// from de.jwic.demo.tbv.BasicTBVDemo
-/****
-import de.jwic.base.ImageRef;
-import de.jwic.controls.Button;
-import de.jwic.controls.ToolBar;
-import de.jwic.controls.ToolBarGroup;
-import de.jwic.controls.actions.Action;
-import de.jwic.controls.actions.IAction;
-import de.jwic.controls.dialogs.DialogAdapter;
-import de.jwic.controls.dialogs.DialogEvent;
-import de.jwic.controls.menu.Menu;
-****/
-//import de.jwic.controls.tableviewer.TableColumn;
-//import de.jwic.controls.tableviewer.TableModel;
-//import de.jwic.controls.tableviewer.TableModelAdapter;
-//import de.jwic.controls.tableviewer.TableModelEvent;
-//import de.jwic.controls.tableviewer.TableViewer;
-/****
-import de.jwic.mobile04.demos.tbv.TableColumn;
-import de.jwic.mobile04.demos.tbv.TableModel;
-import de.jwic.mobile04.demos.tbv.TableModelAdapter;
-import de.jwic.mobile04.demos.tbv.TableModelEvent;
-import de.jwic.mobile04.demos.tbv.TableViewer;
-
-import de.jwic.demo.ImageLibrary;
-***/
 import de.jwic.events.ElementSelectedEvent;
 import de.jwic.events.ElementSelectedListener;
 import de.jwic.events.SelectionEvent;
@@ -40,35 +14,38 @@ import de.jwic.demo.tbv.BasicTBVDemo;
 import de.jwic.demo.tbv.DemoTaskContentProvider;
 import de.jwic.demo.tbv.DemoTask;
 import de.jwic.demo.tbv.LabelProvider;
-//import de.jwic.demo.tbv.MobileTableRenderer;
-/***
-import de.jwic.mobile04.demos.tbv.DemoTaskContentProvider;
-import de.jwic.mobile04.demos.tbv.DemoTask;
-import de.jwic.mobile04.demos.tbv.LabelProvider;
-import de.jwic.mobile04.demos.tbv.MobileTableRenderer;
-***/
 
 import java.util.ArrayList;
 import java.util.List;
 
 import de.jwic.controls.tableviewer.TableViewer;
 import de.jwic.controls.tableviewer.TableModel;
+import de.jwic.controls.tableviewer.TableModelAdapter;
 import de.jwic.controls.tableviewer.TableColumn;
-//public class EchoTable extends MobileDemoModule implements ElementSelectedListener {
+import de.jwic.controls.tableviewer.TableModelEvent;
+import de.jwic.controls.tableviewer.MobileTableRenderer;
+
+import de.jwic.controls.actions.Action;
+import de.jwic.controls.actions.IAction;
+
+import java.util.Iterator;
+import de.jwic.base.ImageRef;
+import de.jwic.demo.ImageLibrary;
+
 public class EchoTable extends MobileDemoModule implements ElementSelectedListener {
 
 	public EchoTable() {
 		super("Echo Table");
 	}
 	
+	private ControlContainer container;
 	private TableViewer viewer;
-	//private DemoTaskContentProvider contentProvider;
+	private DemoTaskContentProvider contentProvider;
 
-	//private IAction flagRed;
-	//private IAction flagBlue;
-	//private IAction deleteTask;
+	private IAction flagRed;
+	private IAction flagBlue;
+	private IAction deleteTask;
 
-	/****
 	private class DemoTableViewerListener implements ElementSelectedListener {
 		public void elementSelected(ElementSelectedEvent event) {
 			
@@ -79,16 +56,12 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 				if (task != null) {
 					refreshActions(task);
 					if (event.isDblClick()) {
-						getSessionContext().notifyMessage("Element Selected: " + task.title);
+						container.getSessionContext().notifyMessage("Element Selected: " + task.title);
 					}
 				}
 			}
 		}
 	}
-	****/
-	//private ControlContainer container = new ControlContainer(controlContainer, "container");
-	private ControlContainer container;
-
 
 	@Override
 	public Control createPage(IControlContainer controlContainer) {
@@ -96,18 +69,11 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 
 		final TableViewer table = new TableViewer(container, "table1");
 		DemoTaskContentProvider contentProvider = new DemoTaskContentProvider(createDemoData());
-		//contentProvider = new DemoTaskContentProvider(createDemoData());
+		contentProvider = new DemoTaskContentProvider(createDemoData());
 		table.setContentProvider(contentProvider);
 		table.setTableLabelProvider(new LabelProvider());
 		//table.setTableRenderer(new MobileTableRenderer());
-		/***
-		viewer.setScrollable(true);
-		viewer.setShowStatusBar(true);
-		viewer.setResizeableColumns(true);
-		viewer.setSelectableColumns(true);
-		viewer.setWidth(200);
-		viewer.setHeight(250);
-		***/
+		table.setTableRenderer(new MobileTableRenderer());
 		table.setScrollable(true);
 		table.setShowStatusBar(true);
 		table.setResizeableColumns(true);
@@ -119,9 +85,19 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		model.setSelectionMode(TableModel.SELECTION_SINGLE);
 		model.setColumnBtnText("Columns Button");
 		
+		DemoTableViewerListener listener = new DemoTableViewerListener();
 		createColumns(table);
-		/*** ***/
 
+		// add listener to demonstrate sorting/images
+		model.addTableModelListener(new TableModelAdapter() {
+			public void columnSelected(TableModelEvent event) {
+				handleSorting(event.getTableColumn());
+			}
+		});
+		model.setSelectionMode(TableModel.SELECTION_SINGLE);
+		//createColumns();
+		createActions();
+		
 		return container;
 	}
 	
@@ -142,19 +118,48 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 	********/
 	}
 		
+	/**
+	 * 
+	 */
+	private void createActions() {
+		
+		flagRed = new Action() {
+			@Override
+			public void run() {
+				handleFlagRed();
+			}
+		};
+		flagRed.setTitle("Mark Completed");
+		flagRed.setIconEnabled(new ImageRef("icons/flag_red.png"));
+
+		flagBlue = new Action() {
+			@Override
+			public void run() {
+				handleFlagBlue();
+			}
+		};
+		flagBlue.setTitle("Mark for Review");
+		flagBlue.setIconEnabled(new ImageRef("icons/flag_blue.png"));
+
+		deleteTask = new Action() {
+			public void run() {
+				container.getSessionContext().notifyMessage("Sorry, not implemented", "error");
+			}
+		};
+		deleteTask.setTitle("Delete");
+		deleteTask.setIconEnabled(ImageLibrary.IMG_CROSS);
+
+		refreshActions(null);
+	}
 		
 	/**
 	 * @param task
 	 */
-	/*****
 	public void refreshActions(DemoTask task) {
-		
 		deleteTask.setEnabled(task != null);
 		flagBlue.setEnabled(task != null);
 		flagRed.setEnabled(task != null && !task.done);
-		
 	}
-	*******/
 	
 		
 	/**
@@ -171,7 +176,6 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		data.add(new DemoTask("Unknown", "", 0));
 		data.add(new DemoTask("Change default implementation", "Sam", 10));
 		data.add(new DemoTask("Evaluate library XYZ for relevance", "Mark", 50));
-		/****
 		for (int i = 1; i < 105; i++) {
 			DemoTask demoTask = new DemoTask();
 			demoTask.done = i % 5 == 0;
@@ -180,10 +184,71 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 			demoTask.owner = "?";
 			data.add(demoTask);
 		}
-		*****/
 		return data;
 	}
 
+
+	/**
+	 * 
+	 */
+	protected void handleFlagBlue() {
+		String key = viewer.getModel().getFirstSelectedKey();
+		if (key != null) {
+			DemoTask task = contentProvider.getObjectFromKey(key);
+			container.getSessionContext().notifyMessage("Task '" + task.title + "' marked for review.", "info");
+		}
+	}
+
+	/**
+	 * 
+	 */
+	protected void handleFlagRed() {
+		String key = viewer.getModel().getFirstSelectedKey();
+		if (key != null) {
+			DemoTask task = contentProvider.getObjectFromKey(key);
+			if (task != null) {
+				task.completed = 100;
+				task.done = true;
+				viewer.requireRedraw();
+			}
+		}
+	}
+	
+	protected void handleSorting(TableColumn tableColumn) {
+		
+		if (tableColumn.getSortIcon() == TableColumn.SORT_ICON_NONE) {
+			// clear all columns
+			for (Iterator<TableColumn> it = viewer.getModel().getColumnIterator(); it.hasNext(); ) {
+				TableColumn col = it.next();
+				col.setSortIcon(TableColumn.SORT_ICON_NONE);
+			}
+		}
+		boolean up = true;
+		switch (tableColumn.getSortIcon()) {
+		case TableColumn.SORT_ICON_NONE: 
+			tableColumn.setSortIcon(TableColumn.SORT_ICON_UP);
+			break;
+		case TableColumn.SORT_ICON_UP:
+			tableColumn.setSortIcon(TableColumn.SORT_ICON_DOWN);
+			up = false;
+			break;
+		case TableColumn.SORT_ICON_DOWN:
+			// once sorted, the list can not be displayed in the
+			// original order as we sort the original table,
+			// therefor loosing the original order.
+			tableColumn.setSortIcon(TableColumn.SORT_ICON_UP);
+			//tableColumn.setSortIcon(TableColumn.SORT_ICON_NONE);
+			break;
+		}
+		
+		// do the sort
+		contentProvider.sortData((String)tableColumn.getUserObject(), up);
+		
+		viewer.setRequireRedraw(true);
+		
+	}
+
+	
 	/**
 	 * 
 	 */
@@ -210,7 +275,5 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		col.setUserObject("completed");
 		col.setWidth(80);
 		model.addColumn(col);
-
 	}
-	
 }
