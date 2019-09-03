@@ -1,11 +1,11 @@
-package de.jwic.mobile04.demos;
+package de.jwic.mobile05.demos;
 
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 import de.jwic.controls.mobile04.MSelectmenu;
 import de.jwic.data.ISelectElement;
-import de.jwic.mobile04.MobileDemoModule;
+import de.jwic.mobile05.MobileDemoModule;
 
 import org.json.JSONObject;
 import org.json.JSONArray;
@@ -23,7 +23,7 @@ import de.jwic.events.SelectionListener;
  * @author vedad
  *
  */
-public final class SelectMenuDemo04 extends MobileDemoModule {
+public final class SelectMenuDemo05 extends MobileDemoModule {
 
 	/**
 	 * @param title
