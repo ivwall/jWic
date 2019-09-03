@@ -15,7 +15,7 @@
  *  
  *******************************************************************************/
 //package de.jwic.demo.tbv;
-package de.jwic.samples.mobile04.demos.tbv;
+package de.jwic.samples.mobile05.demos.tbv;
 
 import java.io.Serializable;
 

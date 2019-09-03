@@ -1,4 +1,4 @@
-package de.jwic.mobile04.demos;
+package de.jwic.mobile05.demos;
 
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
@@ -13,7 +13,7 @@ import de.jwic.events.SelectionListener;
 import de.jwic.events.ValueChangedEvent;
 import de.jwic.events.ValueChangedListener;
 
-import de.jwic.mobile04.MobileDemoModule;
+import de.jwic.mobile05.MobileDemoModule;
 
 /**
  * Created by boogie on 10/30/14.

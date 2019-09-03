@@ -1,4 +1,4 @@
-package de.jwic.mobile04;
+package de.jwic.mobile05;
 
 import java.io.Serializable;
 

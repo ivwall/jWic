@@ -1,18 +1,18 @@
-package de.jwic.mobile04.demos;
+package de.jwic.mobile05.demos;
 
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 import de.jwic.controls.Label;
-import de.jwic.controls.mobile04.MButton;
-import de.jwic.controls.mobile04.MFlipSwitch;
+import de.jwic.controls.mobile05.MButton;
+import de.jwic.controls.mobile05.MFlipSwitch;
 
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
 import de.jwic.events.ValueChangedEvent;
 import de.jwic.events.ValueChangedListener;
 
-import de.jwic.mobile04.MobileDemoModule;
+import de.jwic.mobile05.MobileDemoModule;
 
 /**
  * Created by boogie on 10/30/14.

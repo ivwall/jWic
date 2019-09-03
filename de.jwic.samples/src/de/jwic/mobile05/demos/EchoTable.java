@@ -1,6 +1,6 @@
-package de.jwic.mobile04.demos;
+package de.jwic.mobile05.demos;
 
-import de.jwic.mobile04.MobileDemoModule;
+import de.jwic.mobile05.MobileDemoModule;
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
@@ -36,7 +36,7 @@ import java.util.Iterator;
 import de.jwic.base.ImageRef;
 import de.jwic.demo.ImageLibrary;
 
-//import de.jwic.samples.mobile04.demos.tbv.DemoTask;
+//import de.jwic.samples.mobile05.demos.tbv.DemoTask;
 
 public class EchoTable extends MobileDemoModule implements ElementSelectedListener {
 
