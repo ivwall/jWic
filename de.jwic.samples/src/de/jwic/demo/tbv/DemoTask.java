@@ -25,8 +25,8 @@ public class DemoTask implements Serializable {
 	
 	private static int nextId = 0;
 	int id = nextId++; // unique id
-	boolean done = false;
-	String title = "";
+	public boolean done = false;
+	public String title = "";
 	String owner = "";
 	int completed = 0;
 	

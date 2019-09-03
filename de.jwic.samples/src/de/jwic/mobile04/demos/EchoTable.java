@@ -35,16 +35,25 @@ import de.jwic.events.ElementSelectedEvent;
 import de.jwic.events.ElementSelectedListener;
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
+
+import de.jwic.demo.tbv.BasicTBVDemo;
+import de.jwic.demo.tbv.DemoTaskContentProvider;
+import de.jwic.demo.tbv.DemoTask;
+import de.jwic.demo.tbv.LabelProvider;
+//import de.jwic.demo.tbv.MobileTableRenderer;
 /***
 import de.jwic.mobile04.demos.tbv.DemoTaskContentProvider;
 import de.jwic.mobile04.demos.tbv.DemoTask;
 import de.jwic.mobile04.demos.tbv.LabelProvider;
 import de.jwic.mobile04.demos.tbv.MobileTableRenderer;
+***/
 
 import java.util.ArrayList;
 import java.util.List;
-***/
 
+import de.jwic.controls.tableviewer.TableViewer;
+import de.jwic.controls.tableviewer.TableModel;
+import de.jwic.controls.tableviewer.TableColumn;
 //public class EchoTable extends MobileDemoModule implements ElementSelectedListener {
 public class EchoTable extends MobileDemoModule implements ElementSelectedListener {
 
@@ -52,7 +61,7 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		super("Echo Table");
 	}
 	
-	//private TableViewer viewer;
+	private TableViewer viewer;
 	//private DemoTaskContentProvider contentProvider;
 
 	//private IAction flagRed;
@@ -85,20 +94,33 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 	public Control createPage(IControlContainer controlContainer) {
 		container = new ControlContainer(controlContainer, "container");
 
-		/***
 		final TableViewer table = new TableViewer(container, "table1");
-		//DemoTaskContentProvider contentProvider = new DemoTaskContentProvider(createDemoData());
-		contentProvider = new DemoTaskContentProvider(createDemoData());
+		DemoTaskContentProvider contentProvider = new DemoTaskContentProvider(createDemoData());
+		//contentProvider = new DemoTaskContentProvider(createDemoData());
 		table.setContentProvider(contentProvider);
 		table.setTableLabelProvider(new LabelProvider());
-		table.setTableRenderer(new MobileTableRenderer());
+		//table.setTableRenderer(new MobileTableRenderer());
+		/***
+		viewer.setScrollable(true);
+		viewer.setShowStatusBar(true);
+		viewer.setResizeableColumns(true);
+		viewer.setSelectableColumns(true);
+		viewer.setWidth(200);
+		viewer.setHeight(250);
+		***/
+		table.setScrollable(true);
+		table.setShowStatusBar(true);
+		table.setResizeableColumns(true);
+		table.setSelectableColumns(true);
+		table.setWidth(200);
+		table.setHeight(250);
 
 		TableModel model = table.getModel();
-
 		model.setSelectionMode(TableModel.SELECTION_SINGLE);
 		model.setColumnBtnText("Columns Button");
+		
 		createColumns(table);
-		***/
+		/*** ***/
 
 		return container;
 	}
@@ -138,7 +160,6 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 	/**
 	 * @return
 	 */
-	/********
 	private List<DemoTask> createDemoData() {
 		List<DemoTask> data = new ArrayList<DemoTask>();
 		data.add(new DemoTask("Implement Demo", "Sam", 0));
@@ -150,7 +171,6 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		data.add(new DemoTask("Unknown", "", 0));
 		data.add(new DemoTask("Change default implementation", "Sam", 10));
 		data.add(new DemoTask("Evaluate library XYZ for relevance", "Mark", 50));
-	****/
 		/****
 		for (int i = 1; i < 105; i++) {
 			DemoTask demoTask = new DemoTask();
@@ -161,15 +181,12 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 			data.add(demoTask);
 		}
 		*****/
-	/****
 		return data;
 	}
-	****/
 
 	/**
 	 * 
 	 */
-	/****
 	private void createColumns(TableViewer viewer) {
 
 		TableModel model = viewer.getModel();
@@ -195,6 +212,5 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		model.addColumn(col);
 
 	}
-	*****/
 	
 }
