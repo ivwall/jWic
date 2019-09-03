@@ -28,6 +28,10 @@ import de.jwic.controls.tableviewer.MobileTableRenderer;
 import de.jwic.controls.actions.Action;
 import de.jwic.controls.actions.IAction;
 
+import de.jwic.controls.Button;
+import de.jwic.controls.ToolBar;
+import de.jwic.controls.ToolBarGroup;
+
 import java.util.Iterator;
 import de.jwic.base.ImageRef;
 import de.jwic.demo.ImageLibrary;
@@ -48,7 +52,7 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 
 	private class DemoTableViewerListener implements ElementSelectedListener {
 		public void elementSelected(ElementSelectedEvent event) {
-			
+			System.out.println("EchoTable.DemoTableViewerListener.elementSelected");
 			if (event.getElement() == null) {
 				refreshActions(null);
 			} else {
@@ -68,17 +72,16 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		container = new ControlContainer(controlContainer, "container");
 
 		final TableViewer table = new TableViewer(container, "table1");
-		DemoTaskContentProvider contentProvider = new DemoTaskContentProvider(createDemoData());
+		//DemoTaskContentProvider contentProvider = new DemoTaskContentProvider(createDemoData());
 		contentProvider = new DemoTaskContentProvider(createDemoData());
 		table.setContentProvider(contentProvider);
 		table.setTableLabelProvider(new LabelProvider());
 		//table.setTableRenderer(new MobileTableRenderer());
-		table.setTableRenderer(new MobileTableRenderer());
 		table.setScrollable(true);
 		table.setShowStatusBar(true);
 		table.setResizeableColumns(true);
 		table.setSelectableColumns(true);
-		table.setWidth(200);
+		table.setWidth(250);
 		table.setHeight(250);
 
 		TableModel model = table.getModel();
@@ -86,6 +89,13 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		model.setColumnBtnText("Columns Button");
 		
 		DemoTableViewerListener listener = new DemoTableViewerListener();
+		// add listener to demonstrate sorting/images
+		model.addTableModelListener(new TableModelAdapter() {
+			public void columnSelected(TableModelEvent event) {
+				handleSorting(event.getTableColumn());
+			}
+		});
+		model.setSelectionMode(TableModel.SELECTION_SINGLE);
 		createColumns(table);
 
 		// add listener to demonstrate sorting/images
@@ -98,12 +108,35 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		//createColumns();
 		createActions();
 		
+		// create the toolbar
+		//ToolBar tb = new ToolBar(this, "toolbar");
+		ToolBar tb = new ToolBar(container, "toolbar");
+		tb.setCssClass("j-toolbar ui-corner-top");
+		ToolBarGroup group = tb.addGroup();
+		Button btNew = group.addButton();
+		btNew.setTitle("Add Task");
+		btNew.setIconEnabled(ImageLibrary.IMG_ADD);
+		btNew.addSelectionListener(new SelectionListener() {
+			@Override
+			public void objectSelected(SelectionEvent event) {
+				
+				System.out.println("addSelectionListener "+
+					                 "objectSelected ... addDemoTask");
+				
+				//addDemoTask();
+			}
+		});
+		
+		// Add the listener after all other controls have been created
+		model.addElementSelectedListener(listener);
+		//model.addElementSelectedListener(this);
+				
 		return container;
 	}
 	
 
 	public void elementSelected(ElementSelectedEvent event) {
-	/******
+		System.out.println("EchoTable.elementSelected");
 		if (event.getElement() == null) {
 			refreshActions(null);
 		} else {
@@ -115,7 +148,6 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 				}
 			}
 		}
-	********/
 	}
 		
 	/**
@@ -151,7 +183,26 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 
 		refreshActions(null);
 	}
-		
+
+	/**
+	 * 
+	 */
+	protected void addDemoTask() {
+		/***
+		AddDemoTaskDialog dialog = new AddDemoTaskDialog(viewer.getContainer());
+		dialog.addDialogListener(new DialogAdapter() {
+			public void dialogFinished(DialogEvent event) {
+				AddDemoTaskDialog dialog = ((AddDemoTaskDialog) event.getEventSource());
+				DemoTask task = dialog.getDemoTask();
+				contentProvider.addElement(task);
+				
+				viewer.setRequireRedraw(true);
+			}
+		});
+		dialog.openAsPage();
+		****/
+	}
+
 	/**
 	 * @param task
 	 */
@@ -215,13 +266,15 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 	}
 	
 	protected void handleSorting(TableColumn tableColumn) {
-		
+		System.out.println("Echotable.handleSorting");
 		if (tableColumn.getSortIcon() == TableColumn.SORT_ICON_NONE) {
 			// clear all columns
+			/***
 			for (Iterator<TableColumn> it = viewer.getModel().getColumnIterator(); it.hasNext(); ) {
 				TableColumn col = it.next();
 				col.setSortIcon(TableColumn.SORT_ICON_NONE);
 			}
+			***/
 		}
 		boolean up = true;
 		switch (tableColumn.getSortIcon()) {

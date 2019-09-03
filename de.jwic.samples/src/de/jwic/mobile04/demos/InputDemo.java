@@ -15,7 +15,7 @@ import de.jwic.mobile04.MobileDemoModule;
 /**
  * Created by boogie on 10/29/14.
  */
-public class InputDemo extends MobileDemoModule{
+public class InputDemo extends MobileDemoModule {
 
 	public InputDemo() {
 		super("Input Demo");

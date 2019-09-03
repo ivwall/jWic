@@ -17,7 +17,7 @@ import de.jwic.mobile04.MobileDemoModule;
 /**
  * Created by boogie on 10/30/14.
  */
-public class FlipSwitchDemo extends MobileDemoModule{
+public class FlipSwitchDemo extends MobileDemoModule {
 
 	private Label label;
 

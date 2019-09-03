@@ -18,7 +18,7 @@ import de.jwic.mobile04.MobileDemoModule;
 /**
  * Created by boogie on 10/30/14.
  */
-public class CheckBoxDemo extends MobileDemoModule{
+public class CheckBoxDemo extends MobileDemoModule {
 
 	public CheckBoxDemo() {
 		super("CheckBox Demo");
