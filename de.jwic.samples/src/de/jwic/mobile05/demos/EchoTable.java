@@ -36,8 +36,6 @@ import java.util.Iterator;
 import de.jwic.base.ImageRef;
 import de.jwic.demo.ImageLibrary;
 
-//import de.jwic.samples.mobile05.demos.tbv.DemoTask;
-
 public class EchoTable extends MobileDemoModule implements ElementSelectedListener {
 
 	public EchoTable() {
@@ -45,7 +43,7 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 	}
 	
 	private ControlContainer container;
-	private TableViewer viewer;
+	private TableViewer table;
 	private DemoTaskContentProvider contentProvider;
 
 	private IAction flagRed;
@@ -74,12 +72,10 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 	public Control createPage(IControlContainer controlContainer) {
 		container = new ControlContainer(controlContainer, "container");
 
-		final TableViewer table = new TableViewer(container, "table1");
-		//DemoTaskContentProvider contentProvider = new DemoTaskContentProvider(createDemoData());
+		table = new TableViewer(container, "table1");
 		contentProvider = new DemoTaskContentProvider(createDemoData());
 		table.setContentProvider(contentProvider);
 		table.setTableLabelProvider(new LabelProvider());
-		//table.setTableRenderer(new MobileTableRenderer());
 		table.setScrollable(true);
 		table.setShowStatusBar(true);
 		table.setResizeableColumns(true);
@@ -92,6 +88,7 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		model.setColumnBtnText("Columns Button");
 		
 		DemoTableViewerListener listener = new DemoTableViewerListener();
+		
 		// add listener to demonstrate sorting/images
 		model.addTableModelListener(new TableModelAdapter() {
 			public void columnSelected(TableModelEvent event) {
@@ -199,11 +196,11 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 				DemoTask task = dialog.getDemoTask();
 				contentProvider.addElement(task);
 				
-				viewer.setRequireRedraw(true);
+				table.setRequireRedraw(true);
 			}
 		});
 		dialog.openAsPage();
-		****/
+		***/
 	}
 
 	/**
@@ -246,7 +243,7 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 	 * 
 	 */
 	protected void handleFlagBlue() {
-		String key = viewer.getModel().getFirstSelectedKey();
+		String key = table.getModel().getFirstSelectedKey();
 		if (key != null) {
 			DemoTask task = contentProvider.getObjectFromKey(key);
 			container.getSessionContext().notifyMessage("Task '" + task.title + "' marked for review.", "info");
@@ -257,13 +254,13 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 	 * 
 	 */
 	protected void handleFlagRed() {
-		String key = viewer.getModel().getFirstSelectedKey();
+		String key = table.getModel().getFirstSelectedKey();
 		if (key != null) {
 			DemoTask task = contentProvider.getObjectFromKey(key);
 			if (task != null) {
 				task.completed = 100;
 				task.done = true;
-				viewer.requireRedraw();
+				table.requireRedraw();
 			}
 		}
 	}
@@ -272,12 +269,10 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		System.out.println("Echotable.handleSorting");
 		if (tableColumn.getSortIcon() == TableColumn.SORT_ICON_NONE) {
 			// clear all columns
-			/***
-			for (Iterator<TableColumn> it = viewer.getModel().getColumnIterator(); it.hasNext(); ) {
+			for (Iterator<TableColumn> it = table.getModel().getColumnIterator(); it.hasNext(); ) {
 				TableColumn col = it.next();
 				col.setSortIcon(TableColumn.SORT_ICON_NONE);
 			}
-			***/
 		}
 		boolean up = true;
 		switch (tableColumn.getSortIcon()) {
@@ -300,7 +295,7 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		// do the sort
 		contentProvider.sortData((String)tableColumn.getUserObject(), up);
 		
-		viewer.setRequireRedraw(true);
+		table.setRequireRedraw(true);
 		
 	}
 

@@ -219,6 +219,7 @@ public class TableModel implements Serializable {
 	 * @param listener
 	 */
 	public void addElementSelectedListener(ElementSelectedListener listener) {
+		System.out.println("TableModel.addElementSelectedListener - - - - - -");
 		selectionListeners.add(listener);
 	}
 
@@ -429,6 +430,7 @@ public class TableModel implements Serializable {
 	 * @param dblClick
 	 */
 	public void selection(String rowKey, boolean dblClick) {
+		System.out.println("TableModel.selection rowKey("+rowKey+") dblClick("+dblClick+")");
 		switch (selectionMode) {
 		case SELECTION_SINGLE:
 			if (selection.contains(rowKey)) {
