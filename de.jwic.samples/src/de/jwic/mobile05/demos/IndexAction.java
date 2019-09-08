@@ -20,6 +20,11 @@ public class IndexAction implements IAction {
         name = Integer.toString(x);
     }
     
+    public IndexAction( int x, boolean actv ) {
+        name = Integer.toString(x);
+        active = actv;
+    }
+    
     public void addPropertyChangeListener(PropertyChangeListener listener) {
     }
     

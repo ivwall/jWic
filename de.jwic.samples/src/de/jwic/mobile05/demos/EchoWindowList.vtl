@@ -1,37 +1,16 @@
 <div id="">
 	<ul>
-		<li>000</li>
-		<li>001</li>
-		<li>002</li>
-		<li>003</li>
-		<li>004</li>
-		<li>005</li>
-		<li>006</li>
-		<li>007</li>
-		<li>008</li>
-		<li>009</li>
-		<li>010</li>
-		<li>011</li>
-		<li>012</li>
-		<li>013</li>
-		<li>014</li>
-		<li>015</li>
-		<li>016</li>
-		<li>017</li>
-		<li>018</li>
-		<li>019</li>
-		<li>020</li>
-		<li>021</li>
-		<li>022</li>
-		<li>023</li>
-		<li>024</li>
-		<li>025</li>
-		<li>026</li>
-		<li>027</li>
-		<li>028</li>
-		<li>029</li>
-		<li>000</li>
-		<li>000</li>
-		<li>000</li>
+	#foreach($key in $control.actionKeys)
+		#set($action = $control.getActionByKey($key))
+		#if ($action.active)
+			<li class="active">
+				<a href="$control.createActionURL("click","$key")">$action.title</a>
+			</li>
+		#else
+			<li>
+				<a href="$control.createActionURL("click","$key")">$action.title</a>
+			</li>
+		#end
+	#end
 	</ul>
 </div>
