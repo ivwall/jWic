@@ -31,41 +31,28 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Hashtable;
 
-public class EchoWindowList extends ControlContainer implements PropertyChangeListener {
+import de.jwic.controls.Label;
+
+public class EchoWindowList extends ControlContainer {
+	
 	protected transient Log log = LogFactory.getLog(getClass());
 	
 	protected List actionOrder = new ArrayList();
 	protected Map actionMap = new HashMap();
+	
+	private Hashtable<Integer,String> keyEchoTbl = new Hashtable<Integer,String>();
 
-    protected ActionUpdateListener actionListener = null;
-    
-    private class ActionUpdateListener implements PropertyChangeListener {
-        public void propertyChange(PropertyChangeEvent evt) {
-            IndexAction a = (IndexAction)evt.getSource();
-            requireRedraw();
-        }
-    }
-	
-	
 	public EchoWindowList( IControlContainer container ) {
 		super(container);
-		
-		/***
-		for ( int x = 1; x < 20; x++ ) {
-			addAction(new IndexAction( x ));
-		}
-		***/
-		
 		echoList();
-		
 	}
 	
     public void addAction(IAction action) {
         Integer key = new Integer(action.getTitle());
         actionOrder.add(key);
         actionMap.put(key, action);
-        action.addPropertyChangeListener(actionListener);
     }
 	
     public List getActionKeys() {
@@ -78,17 +65,19 @@ public class EchoWindowList extends ControlContainer implements PropertyChangeLi
     }
 	
     public void actionPerformed(String actionId, String parameter) {
-        System.out.println("EchoWindowList actionPerformed actionId("+
-                                     actionId+") parameter("+parameter+")");
+    	try {
+			System.out.println("EchoWindowList actionPerformed actionId("+
+										 actionId+") parameter("+parameter+")");
+			String echo = keyEchoTbl.get(new Integer(parameter));
+			System.out.println("               "+echo);
+        } catch(Exception e) {
+			System.out.println(e);
+		} 
     }
     
-	public void propertyChange(PropertyChangeEvent evt) {
-		IndexAction a = (IndexAction)evt.getSource();
-		requireRedraw();
-	}
-	
 	public void echoList(){
 		try {
+			
 		  String url = "http://localhost:8080/01-amp3s/01-amp3s.json";
 		  URL obj = new URL(url);
 		  HttpURLConnection con = (HttpURLConnection)obj.openConnection();
@@ -113,20 +102,11 @@ public class EchoWindowList extends ControlContainer implements PropertyChangeLi
 			for (int i = 0; i < arr.length(); i++) {
 				System.out.println(" " + arr.get(i));
 				addAction(new IndexAction( i, ""+arr.get(i) ));
-				//selectmenu.addElement(""+arr.get(i), ""+i+"-"+arr.get(i));
-		    /**
-				arrayOButtons[i] = new AudioButton(tlc);
-				arrayOButtons[i].addSelectionListener(
-					                       (new AudioSelection(""+arr.get(i))));
-				arrayOButtons[i].setTitle(""+arr.get(i));
-				arrayOButtons[i].setAudioLink("http://localhost:8080/01-amp3s/"+arr.get(i));
-			**/
+				keyEchoTbl.put(new Integer(i), ""+arr.get(i));
 			}
 		   
 		} catch(Exception e) {
 			System.out.println(e);
 		}
-		
 	}
-    
 }
