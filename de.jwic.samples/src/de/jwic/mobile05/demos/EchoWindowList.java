@@ -43,11 +43,20 @@ public class EchoWindowList extends ControlContainer {
 	protected Map actionMap = new HashMap();
 	
 	private Hashtable<Integer,String> keyEchoTbl = new Hashtable<Integer,String>();
+	
+	private Label echoLabel;
 
 	public EchoWindowList( IControlContainer container ) {
 		super(container);
 		echoList();
 	}
+	
+	public EchoWindowList( IControlContainer container, Label lbl ) {
+		super(container);
+		echoLabel = lbl;
+		echoList();
+	}
+	
 	
     public void addAction(IAction action) {
         Integer key = new Integer(action.getTitle());
@@ -70,6 +79,7 @@ public class EchoWindowList extends ControlContainer {
 										 actionId+") parameter("+parameter+")");
 			String echo = keyEchoTbl.get(new Integer(parameter));
 			System.out.println("               "+echo);
+			echoLabel.setText( echo );
         } catch(Exception e) {
 			System.out.println(e);
 		} 

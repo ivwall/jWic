@@ -12,6 +12,28 @@ import org.apache.commons.logging.LogFactory;
 
 import de.jwic.controls.Label;
 
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Enumeration;
+
+import de.jwic.controls.AnchorLinkControl;
+import de.jwic.controls.actions.IAction;
+
+import org.json.JSONObject;
+import org.json.JSONArray;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Hashtable;
+
 public class EchoWindow extends MobileDemoModule {
 	
     protected transient Log log = LogFactory.getLog(getClass());
@@ -33,8 +55,9 @@ public class EchoWindow extends MobileDemoModule {
 		sc.setHeight("250px");
 		sc.setWidth("250px");
 		
-		EchoWindowList ewList = new EchoWindowList(sc);
+		EchoWindowList ewList = new EchoWindowList( sc, label );
 		
 		return container;
 	}
+
 }
