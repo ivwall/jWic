@@ -54,6 +54,13 @@ public class EchoLabel extends HTMLElement {
 	public String getText() {
 		return strText;
 	}
+	
+	
+	public String getEcho() {
+		return "http://localhost:8080/01-amp3s/"+strText;
+	}
+	
+	
 	/**
 	 *
 	 * @param newText java.lang.String
