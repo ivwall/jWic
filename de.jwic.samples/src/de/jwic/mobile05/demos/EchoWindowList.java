@@ -44,14 +44,14 @@ public class EchoWindowList extends ControlContainer {
 	
 	private Hashtable<Integer,String> keyEchoTbl = new Hashtable<Integer,String>();
 	
-	private Label echoLabel;
+	private EchoLabel echoLabel;
 
 	public EchoWindowList( IControlContainer container ) {
 		super(container);
 		echoList();
 	}
 	
-	public EchoWindowList( IControlContainer container, Label lbl ) {
+	public EchoWindowList( IControlContainer container, EchoLabel lbl ) {
 		super(container);
 		echoLabel = lbl;
 		echoList();

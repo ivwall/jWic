@@ -38,7 +38,7 @@ public class EchoWindow extends MobileDemoModule {
 	
     protected transient Log log = LogFactory.getLog(getClass());
     
-	private Label label;
+	private EchoLabel label;
     
 	public EchoWindow() {
 		super("Echo Window");
@@ -48,7 +48,7 @@ public class EchoWindow extends MobileDemoModule {
 	public Control createPage(IControlContainer controlContainer) {
 		final ControlContainer container = new ControlContainer(controlContainer);
 		
-		label = new Label(container, "label");
+		label = new EchoLabel(container, "label");
 		label.setText("label controller");
 		
 		ScrollableContainer sc = new ScrollableContainer(container);
