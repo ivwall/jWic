@@ -57,7 +57,7 @@ public class EchoLabel extends HTMLElement {
 	
 	
 	public String getEcho() {
-		return "http://localhost:8080/01-amp3s/"+strText;
+		return "http:"+'/'+'/'+"localhost:8080"+'/'+"01-amp3s"+'/'+strText;
 	}
 	
 	
@@ -101,6 +101,11 @@ public class EchoLabel extends HTMLElement {
 			sb.append(key).append(": ").append(styles.get(key)).append(";");
 		}
 		return sb.toString();
+	}
+	
+	
+	public boolean isAudio(){
+		return true;
 	}
 	
 }
