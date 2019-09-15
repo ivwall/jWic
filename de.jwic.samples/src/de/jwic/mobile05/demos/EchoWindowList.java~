@@ -49,7 +49,6 @@ public class EchoWindowList extends ControlContainer {
 	private EchoLabel echoLabel;
 	private MFlipSwitch flipSwitch;
 	
-	/*****
 	public EchoWindowList( IControlContainer container ) {
 		super(container);
 		echoList();
@@ -60,7 +59,6 @@ public class EchoWindowList extends ControlContainer {
 		echoLabel = lbl;
 		echoList();
 	}
-	*****/
 	
 	public EchoWindowList( IControlContainer container, EchoLabel lbl, MFlipSwitch mfs ) {
 		super(container);
@@ -91,8 +89,6 @@ public class EchoWindowList extends ControlContainer {
 			String echo = keyEchoTbl.get(new Integer(parameter));
 			System.out.println("               "+echo);
 			echoLabel.setText( echo );
-			flipSwitch.setChecked(!flipSwitch.isChecked());
-			//flipSwitch.redraw();
         } catch(Exception e) {
 			System.out.println(e);
 		} 
