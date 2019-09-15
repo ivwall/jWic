@@ -73,7 +73,7 @@ public class EchoWindow extends MobileDemoModule {
 		sc.setHeight("250px");
 		sc.setWidth("250px");
 		
-		EchoWindowList ewList = new EchoWindowList( sc, label );
+		EchoWindowList ewList = new EchoWindowList( sc, label, checkBox );
 		
 		return container;
 	}
