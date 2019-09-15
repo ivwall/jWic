@@ -279,8 +279,7 @@ public class FixColumnTableRenderer extends DefaultTableRenderer {
 			}
 		} catch (Exception e) {
 			writer.println("Error reading data from ContentProvider: " + e);
-			//log.error("Error reading data from ContentProvider", e);
-			System.out.println("Error reading data from ContentProvider"+e.toString());
+			log.error("Error reading data from ContentProvider", e);
 		}
 		model.setLastRowRenderCount(count);
 
@@ -602,7 +601,7 @@ public class FixColumnTableRenderer extends DefaultTableRenderer {
 		} catch (ClassNotFoundException e) {
 			throw new IOException("ClassNotFound in readObject");
 		}
-		//log = LogFactory.getLog(getClass());
+		log = LogFactory.getLog(getClass());
 	}
 
 	/**

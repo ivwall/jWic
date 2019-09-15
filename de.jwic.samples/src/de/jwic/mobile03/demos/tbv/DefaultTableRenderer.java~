@@ -60,7 +60,7 @@ public class DefaultTableRenderer implements ITableRenderer, Serializable {
 	/** default icon used for indention */
 	public final static ImageRef ICON_CLEAR = new ImageRef("/jwic/gfx/clear.gif");
 
-	//protected transient Log log = LogFactory.getLog(getClass());
+	protected transient Log log = LogFactory.getLog(getClass());
 
 	private boolean expandLinkSpacing = true;
 	private int expandIconWidth = 19;
@@ -246,8 +246,7 @@ public class DefaultTableRenderer implements ITableRenderer, Serializable {
 			model.setLastRowRenderCount(count);
 		} catch (Exception e) {
 			writer.println("Error reading data from ContentProvider: " + e);
-			//log.error("Error reading data from ContentProvider", e);
-			System.out.println("Error reading data from ContentProvider"+e.toString());
+			log.error("Error reading data from ContentProvider", e);
 		}
 
 		writer.println("</TBODY>");
@@ -666,7 +665,7 @@ public class DefaultTableRenderer implements ITableRenderer, Serializable {
 		} catch (ClassNotFoundException e) {
 			throw new IOException("ClassNotFound in readObject");
 		}
-		//log = LogFactory.getLog(getClass());
+		log = LogFactory.getLog(getClass());
 	}
 
 }

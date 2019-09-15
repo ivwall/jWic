@@ -45,7 +45,7 @@ import de.jwic.events.SelectionListener;
  */
 public class InputBoxDemoModule extends DemoModule {
 	
-	//protected final Log log = LogFactory.getLog(getClass());
+	protected final Log log = LogFactory.getLog(getClass());
 
 	/**
 	 * 
@@ -74,8 +74,7 @@ public class InputBoxDemoModule extends DemoModule {
 
 			@Override
 			public void keyPressed(KeyEvent event) {
-				//log.debug("Key pressed for InputBox with listen key code " + inptBox.getListenKeyCode());
-				System.out.println("Key pressed for InputBox with listen key code " + inptBox.getListenKeyCode());
+				log.debug("Key pressed for InputBox with listen key code " + inptBox.getListenKeyCode());
 			}
 		});
 
@@ -117,8 +116,7 @@ public class InputBoxDemoModule extends DemoModule {
 
 			@Override
 			public void keyPressed(KeyEvent event) {
-				//log.debug("Key pressed for NumericInputBox with listen key code " + numInp.getListenKeyCode());
-				System.out.println("Key pressed for NumericInputBox with listen key code " + numInp.getListenKeyCode());
+				log.debug("Key pressed for NumericInputBox with listen key code " + numInp.getListenKeyCode());
 			}
 		});
 
