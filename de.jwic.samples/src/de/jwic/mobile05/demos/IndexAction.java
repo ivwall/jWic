@@ -24,15 +24,6 @@ public class IndexAction implements IAction2 {
         echo = e;
     }
     
-    public IndexAction(int x) {
-        name = Integer.toString(x);
-    }
-    
-    public IndexAction( int x, boolean actv ) {
-        name = Integer.toString(x);
-        active = actv;
-    }
-    
     public void addPropertyChangeListener(PropertyChangeListener listener) {
     }
     

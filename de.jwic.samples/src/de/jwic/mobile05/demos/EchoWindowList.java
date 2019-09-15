@@ -45,10 +45,13 @@ public class EchoWindowList extends ControlContainer {
 	private Hashtable<Integer,String> keyEchoTbl = new Hashtable<Integer,String>();
 	
 	private EchoLabel echoLabel;
+	
+	//private IControlContainer ewlContainer;
 
 	public EchoWindowList( IControlContainer container ) {
 		super(container);
 		echoList();
+		//ewlContainer = container;
 	}
 	
 	public EchoWindowList( IControlContainer container, EchoLabel lbl ) {
@@ -112,6 +115,7 @@ public class EchoWindowList extends ControlContainer {
 			for (int i = 0; i < arr.length(); i++) {
 				System.out.println(" " + arr.get(i));
 				addAction(new IndexAction( i, ""+arr.get(i) ));
+				//addAction(new AudioButton( ewlContainer, ""+arr.get(i), i ));
 				keyEchoTbl.put(new Integer(i), ""+arr.get(i));
 			}
 		   

@@ -49,7 +49,7 @@ public class EchoWindow extends MobileDemoModule {
 		final ControlContainer container = new ControlContainer(controlContainer);
 		
 		label = new EchoLabel(container, "label");
-		label.setText("label controller");
+		label.setText("Magnetic Echo");
 		
 		ScrollableContainer sc = new ScrollableContainer(container);
 		sc.setHeight("250px");
