@@ -7,7 +7,6 @@ import de.jwic.base.Application;
 import de.jwic.base.Control;
 import de.jwic.base.IControlContainer;
 import de.jwic.mobile06.demos.CheckBoxDemo;
-import de.jwic.mobile06.demos.EchoTable;
 import de.jwic.mobile06.demos.EchoWindow;
 import de.jwic.mobile06.demos.FlipSwitchDemo;
 import de.jwic.mobile06.demos.InputDemo;
@@ -24,7 +23,6 @@ public class MobileDemoApplication extends Application {
 		final List<MobileDemoModule> mobileDemoModules = new ArrayList<MobileDemoModule>();
 
 		mobileDemoModules.add(new CheckBoxDemo());
-		mobileDemoModules.add(new EchoTable());
 		mobileDemoModules.add(new EchoWindow());
 		mobileDemoModules.add(new FlipSwitchDemo());
 		mobileDemoModules.add(new InputDemo());
