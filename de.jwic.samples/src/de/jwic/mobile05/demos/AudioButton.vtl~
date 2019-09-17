@@ -7,11 +7,4 @@
         
         $control.title
         
-        <input id="$control.controlID" 
-               type="button" 
-               data-enhanced="true" 
-               value="$!control.title" 
-               #if(!$control.enabled) disabled #end>
-        </input>
-        
 </button>

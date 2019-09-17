@@ -1,6 +1,6 @@
-package de.jwic.mobile05.demos;
+package de.jwic.mobile06.demos;
 
-import de.jwic.mobile05.MobileDemoModule;
+import de.jwic.mobile06.MobileDemoModule;
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
@@ -34,7 +34,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Hashtable;
 
-import de.jwic.controls.mobile05.MFlipSwitch;
+import de.jwic.controls.mobile06.MFlipSwitch;
 import de.jwic.events.ValueChangedEvent;
 import de.jwic.events.ValueChangedListener;
 

@@ -92,7 +92,6 @@ public class EchoWindowList extends ControlContainer {
 			System.out.println("               "+echo);
 			echoLabel.setText( echo );
 			flipSwitch.setChecked(!flipSwitch.isChecked());
-			//flipSwitch.redraw();
         } catch(Exception e) {
 			System.out.println(e);
 		} 
