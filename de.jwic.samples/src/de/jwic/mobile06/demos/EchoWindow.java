@@ -110,13 +110,14 @@ public class EchoWindow extends MobileDemoModule {
 			for (int i = 0; i < arr.length(); i++) {
 				System.out.println(" " + arr.get(i));
 				arrayOButtons[i] = new AudioButton(tlc);
-				//arrayOButtons[i].addSelectionListener(
-				//	                       (new AudioSelection(""+arr.get(i))));
+				arrayOButtons[i].addSelectionListener(
+					                       (new AudioSelection(""+arr.get(i))));
 				arrayOButtons[i].addSelectionListener(new SelectionListener(){
 					@Override
 					public void objectSelected(SelectionEvent event) {
 						System.out.println("++++++++++++++++objectSelected");
 						System.out.println("                "+event.toString());
+						label.setText(getTitle());
 					}
 				});
 				arrayOButtons[i].setTitle(""+arr.get(i));
