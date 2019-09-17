@@ -58,7 +58,7 @@ public class EchoWindow extends MobileDemoModule {
 	@Override
 	public Control createPage(IControlContainer controlContainer) {
 		final ControlContainer container = new ControlContainer(controlContainer);
-		
+		/****
 		final MFlipSwitch checkBox = new MFlipSwitch(container, "checkBox");
 		checkBox.addValueChangedListener(new ValueChangedListener() {
 			
@@ -68,7 +68,7 @@ public class EchoWindow extends MobileDemoModule {
 				label.setText("FlipSwitch is " + (state ? "checked" : "not checked"));
 			}
 		});
-		
+		****/
 		label = new EchoLabel(container, "label");
 		label.setText("Magnetic Echo");
 		
@@ -110,14 +110,17 @@ public class EchoWindow extends MobileDemoModule {
 			for (int i = 0; i < arr.length(); i++) {
 				System.out.println(" " + arr.get(i));
 				arrayOButtons[i] = new AudioButton(tlc);
+				//--------------
+				// I don't like the label being passed into the construtor
+				// but whatever
 				arrayOButtons[i].addSelectionListener(
-					                       (new AudioSelection(""+arr.get(i))));
+					    (new AudioSelection(""+arr.get(i),label)));
+				//--------------------------------
 				arrayOButtons[i].addSelectionListener(new SelectionListener(){
 					@Override
 					public void objectSelected(SelectionEvent event) {
 						System.out.println("++++++++++++++++objectSelected");
 						System.out.println("                "+event.toString());
-						label.setText(getTitle());
 					}
 				});
 				arrayOButtons[i].setTitle(""+arr.get(i));
