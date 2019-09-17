@@ -6,11 +6,18 @@ import de.jwic.base.IControlContainer;
 import de.jwic.controls.Label;
 import de.jwic.controls.InputBox.InputType;
 import de.jwic.controls.mobile04.MInputBox;
+import de.jwic.controls.mobile04.MButton;
 
 import de.jwic.events.ValueChangedEvent;
 import de.jwic.events.ValueChangedListener;
 
 import de.jwic.mobile06.MobileDemoModule;
+
+import de.jwic.events.SelectionEvent;
+import de.jwic.events.SelectionListener;
+import de.jwic.events.ValueChangedEvent;
+import de.jwic.events.ValueChangedListener;
+
 
 /**
  * Created by boogie on 10/29/14.
@@ -31,14 +38,6 @@ public class InputDemo extends MobileDemoModule {
 		final MInputBox textInput = new MInputBox(container, "textInput");
 		textInput.setText("Hi Lea");
 		textInput.setClearBtn(true);
-
-		final Label lblEmail = new Label(container);
-		lblEmail.setText("Text Input Without Corners");
-		
-		final MInputBox textEmail = new MInputBox(container, "textEmail");
-		textEmail.setType(InputType.TEXT);
-		textEmail.setCorners(false);
-
 		
 		final Label labelForTextInputWithUpdateOnBlur = new Label(container, "labelForTextInputWithUpdateOnBlur");
 		labelForTextInputWithUpdateOnBlur.setText("Text Input With Mini and Update on Blur");
@@ -60,9 +59,20 @@ public class InputDemo extends MobileDemoModule {
 		
 		MInputBox multiLine = new MInputBox(container, "multiline");
 		multiLine.setMultiLine(true);
-		multiLine.setRows(5);
+		multiLine.setRows(3);
 		multiLine.setAutogrow(false);
 
+		final MButton toggleFromJava = new MButton(container, "toggleFromJava");
+		toggleFromJava.setTitle("Send");
+		toggleFromJava.addSelectionListener(new SelectionListener() {
+			
+			@Override
+			public void objectSelected(SelectionEvent event) {
+				System.out.println("Toggle?");
+				//checkBox.setChecked(!checkBox.isChecked());
+			}
+		});
+		
 
 		return container;
 	}
