@@ -24,7 +24,6 @@ public class MobileDemoPage extends MPage {
 
 		final MPanel menu = new MPanel(this.getHeaderContainer(), "menu");
 		menu.setTitle("Open Menu");
-		//menu.setPosition(MPanel.Position.RIGHT);
 		menu.setDisplay(MPanel.Display.OVERLAY);
 
 		for(int i =0; i<modules.size(); i++){

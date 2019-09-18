@@ -52,7 +52,7 @@ public class EchoWindow extends MobileDemoModule {
 	private EchoLabel label;
     
 	public EchoWindow() {
-		super("Magnetic Echos");
+		super("Echos : Scrolling Window");
 	}
 
 	@Override

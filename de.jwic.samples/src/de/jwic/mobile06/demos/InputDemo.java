@@ -25,7 +25,7 @@ import de.jwic.events.ValueChangedListener;
 public class InputDemo extends MobileDemoModule {
 
 	public InputDemo() {
-		super("Input Demo");
+		super("Prospect Link");
 	}
 
 	@Override
@@ -33,10 +33,10 @@ public class InputDemo extends MobileDemoModule {
 		ControlContainer container = new ControlContainer(controlContainer);
 
 		final Label labelForTextInput = new Label(container, "labelForTextInput");
-		labelForTextInput.setText("Text Input With Clear Button");
+		labelForTextInput.setText("Prospect mobile or email");
 		
 		final MInputBox textInput = new MInputBox(container, "textInput");
-		textInput.setText("prospect mobile num or email address");
+		textInput.setText(" ");
 		textInput.setClearBtn(true);
 		
 		final Label labelForTextInputWithUpdateOnBlur = new Label(container, "labelForTextInputWithUpdateOnBlur");
@@ -53,14 +53,6 @@ public class InputDemo extends MobileDemoModule {
 				labelForTextInputWithUpdateOnBlur2.setText(textInputWithUpdateOnBlur.getText());
 			}
 		});
-
-		final Label labelForTextArea = new Label(container, "labelForTextArea");
-		labelForTextArea.setText("Multline TextArea Without Autogrow");
-		
-		MInputBox multiLine = new MInputBox(container, "multiline");
-		multiLine.setMultiLine(true);
-		multiLine.setRows(3);
-		multiLine.setAutogrow(false);
 
 		final MButton toggleFromJava = new MButton(container, "toggleFromJava");
 		toggleFromJava.setTitle("Send");

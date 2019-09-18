@@ -21,8 +21,8 @@ public class MobileDemoApplication extends Application {
 		final List<MobileDemoModule> mobileDemoModules = new ArrayList<MobileDemoModule>();
 
 		mobileDemoModules.add(new EchoWindow());
-		mobileDemoModules.add(new InputDemo());
 		mobileDemoModules.add(new SelectMenuDemo06());
+		mobileDemoModules.add(new InputDemo());
 		
 		return new MobileDemoPage(container, "demoPage", mobileDemoModules);
 	}
