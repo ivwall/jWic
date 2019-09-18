@@ -36,7 +36,7 @@ public class InputDemo extends MobileDemoModule {
 		labelForTextInput.setText("Text Input With Clear Button");
 		
 		final MInputBox textInput = new MInputBox(container, "textInput");
-		textInput.setText("Hi Lea");
+		textInput.setText("prospect mobile num or email address");
 		textInput.setClearBtn(true);
 		
 		final Label labelForTextInputWithUpdateOnBlur = new Label(container, "labelForTextInputWithUpdateOnBlur");

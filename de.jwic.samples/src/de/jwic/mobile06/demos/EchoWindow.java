@@ -52,7 +52,7 @@ public class EchoWindow extends MobileDemoModule {
 	private EchoLabel label;
     
 	public EchoWindow() {
-		super("Echo Window");
+		super("Echos : Scrolling Window");
 	}
 
 	@Override
@@ -60,7 +60,7 @@ public class EchoWindow extends MobileDemoModule {
 		final ControlContainer container = new ControlContainer(controlContainer);
 		
 		label = new EchoLabel(container, "label");
-		label.setText("Magnetic Echo");
+		label.setText("Select an echo.");
 		
 		ScrollableContainer sc = new ScrollableContainer(container);
 		sc.setHeight("350px");

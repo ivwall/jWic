@@ -52,34 +52,20 @@ public class EchoWindow extends MobileDemoModule {
 	private EchoLabel label;
     
 	public EchoWindow() {
-		super("Echo Window");
+		super("Magnetic Echos");
 	}
 
 	@Override
 	public Control createPage(IControlContainer controlContainer) {
 		final ControlContainer container = new ControlContainer(controlContainer);
 		
-		final MFlipSwitch checkBox = new MFlipSwitch(container, "checkBox");
-		checkBox.addValueChangedListener(new ValueChangedListener() {
-			
-			@Override
-			public void valueChanged(ValueChangedEvent event) {
-				final boolean state = checkBox.isChecked();
-				label.setText("FlipSwitch is " + (state ? "checked" : "not checked"));
-			}
-		});
-		
 		label = new EchoLabel(container, "label");
-		label.setText("Magnetic Echo");
+		label.setText("Select an echo.");
 		
-		System.out.println("=====> class name "+getClass().getName()+"  <======================================");
 		ScrollableContainer sc = new ScrollableContainer(container);
-		sc.setHeight("250px");
-		sc.setWidth("250px");
+		sc.setHeight("350px");
+		sc.setWidth("300px");
 		
-		//------------------------------------------------------
-		//EchoWindowList ewList = new EchoWindowList( sc, label, checkBox );
-
 		sc.setTemplateName(getClass().getName()+"_group");
 		TableLayoutContainer tlc = new TableLayoutContainer(sc, "table");
 		tlc.setColumnCount(1);
