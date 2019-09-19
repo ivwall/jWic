@@ -1,4 +1,4 @@
-package de.jwic.mobile06.demos;
+package de.jwic.linder01.demos;
 
 import de.jwic.events.SelectionListener;
 import de.jwic.events.SelectionEvent;

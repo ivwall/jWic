@@ -1,4 +1,4 @@
-package de.jwic.mobile06.demos;
+package de.jwic.magneticechos01.demos;
 
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
@@ -29,7 +29,7 @@ public final class SelectMenuDemo06 extends MobileDemoModule {
 	 * @param title
 	 */
 	public SelectMenuDemo06() {
-		super("Echos : List");
+		super("Echo List");
 	}
 
 	/* (non-Javadoc)

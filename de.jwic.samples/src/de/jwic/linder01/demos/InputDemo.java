@@ -1,4 +1,4 @@
-package de.jwic.mobile06.demos;
+package de.jwic.linder01.demos;
 
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
@@ -11,7 +11,7 @@ import de.jwic.controls.mobile04.MButton;
 import de.jwic.events.ValueChangedEvent;
 import de.jwic.events.ValueChangedListener;
 
-import de.jwic.mobile06.MobileDemoModule;
+import de.jwic.linder01.MobileDemoModule;
 
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;

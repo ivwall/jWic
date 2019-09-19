@@ -1,6 +1,6 @@
-package de.jwic.mobile06.demos;
+package de.jwic.linder01.demos;
 
-import de.jwic.mobile06.MobileDemoModule;
+import de.jwic.linder01.MobileDemoModule;
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
@@ -72,7 +72,7 @@ public class EchoWindow extends MobileDemoModule {
 
 		try {
 			
-		    String url = "http://localhost:8080/01-amp3s/01-amp3s.json";
+		    String url = "http://localhost:8080/02-linder/linder-list.json";
 		    URL obj = new URL(url);
 		    HttpURLConnection con = (HttpURLConnection)obj.openConnection();
 		    int responseCode = con.getResponseCode();
@@ -89,7 +89,7 @@ public class EchoWindow extends MobileDemoModule {
 		    System.out.println(response.toString());
 		    JSONObject myresponse = new JSONObject(response.toString());
 		   
-			JSONArray arr = myresponse.getJSONArray("echo-list");
+			JSONArray arr = myresponse.getJSONArray("linder-list");
 			
 			AudioButton[] arrayOButtons = new AudioButton[arr.length()];
 			
@@ -110,7 +110,7 @@ public class EchoWindow extends MobileDemoModule {
 					}
 				});
 				arrayOButtons[i].setTitle(""+arr.get(i));
-				arrayOButtons[i].setAudioLink("http://localhost:8080/01-amp3s/"+arr.get(i));
+				arrayOButtons[i].setAudioLink("http://localhost:8080/02-linder/"+arr.get(i));
 			}
 		} catch(Exception e) {
 			System.out.println(e);

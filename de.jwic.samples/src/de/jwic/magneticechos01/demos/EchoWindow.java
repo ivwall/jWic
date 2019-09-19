@@ -1,6 +1,6 @@
-package de.jwic.mobile06.demos;
+package de.jwic.magneticechos01.demos;
 
-import de.jwic.mobile06.MobileDemoModule;
+import de.jwic.magneticechos01.MobileDemoModule;
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;

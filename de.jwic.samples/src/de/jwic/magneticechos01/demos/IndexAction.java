@@ -1,4 +1,4 @@
-package de.jwic.mobile06.demos;
+package de.jwic.magneticechos01.demos;
 
 import de.jwic.controls.actions.IAction;
 import java.beans.PropertyChangeEvent;

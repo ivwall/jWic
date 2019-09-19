@@ -14,7 +14,7 @@
  * limitations under the License.
  *  
  *******************************************************************************/
-package de.jwic.mobile06.demos;
+package de.jwic.linder01.demos;
 
 import de.jwic.controls.HTMLElement;
 import java.util.HashMap;

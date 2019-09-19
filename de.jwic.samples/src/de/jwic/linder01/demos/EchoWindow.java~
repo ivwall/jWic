@@ -1,6 +1,6 @@
-package de.jwic.mobile06.demos;
+package de.jwic.linder01.demos;
 
-import de.jwic.mobile06.MobileDemoModule;
+import de.jwic.linder01.MobileDemoModule;
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
@@ -52,7 +52,7 @@ public class EchoWindow extends MobileDemoModule {
 	private EchoLabel label;
     
 	public EchoWindow() {
-		super("Echos : Scrolling Window");
+		super("Echo Window");
 	}
 
 	@Override

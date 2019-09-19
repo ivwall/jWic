@@ -1,4 +1,4 @@
-package de.jwic.mobile06.demos;
+package de.jwic.magneticechos01.demos;
 
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
@@ -13,7 +13,7 @@ import de.jwic.events.SelectionListener;
 import de.jwic.events.ValueChangedEvent;
 import de.jwic.events.ValueChangedListener;
 
-import de.jwic.mobile06.MobileDemoModule;
+import de.jwic.magneticechos01.MobileDemoModule;
 
 /**
  * Created by boogie on 10/30/14.

@@ -15,7 +15,7 @@
  *  
  *******************************************************************************/
 //package de.jwic.demo.tbv;
-package de.jwic.samples.mobile06.demos.tbv;
+package de.jwic.samples.magneticechos01.demos.tbv;
 
 import java.io.Serializable;
 

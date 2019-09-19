@@ -29,7 +29,7 @@ public final class SelectMenuDemo06 extends MobileDemoModule {
 	 * @param title
 	 */
 	public SelectMenuDemo06() {
-		super("Echos : List");
+		super("Echo List");
 	}
 
 	/* (non-Javadoc)

@@ -14,8 +14,7 @@
  * limitations under the License.
  *  
  *******************************************************************************/
-//package de.jwic.demo.tbv;
-package de.jwic.samples.mobile06.demos.tbv;
+package de.jwic.samples.linder01.demos.tbv;
 
 import java.io.Serializable;
 

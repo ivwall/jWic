@@ -11,6 +11,11 @@ import de.jwic.base.JavaScriptSupport;
 import de.jwic.controls.menu.Menu;
 import de.jwic.controls.SelectableControl;
 
+//whew thi is messy
+import de.jwic.controls.mobile04.Icon;
+import de.jwic.controls.mobile04.IconPos;
+import de.jwic.controls.mobile04.Theme;
+
 
 /**
  * Represents the &lt;button&gt; html element. 
@@ -36,6 +41,15 @@ public class AudioButton extends SelectableControl {
 	private String audiolink = "not set";
 	
 	private Menu menu = null;
+
+	private boolean corners = true;
+	private boolean inline = false;
+	private boolean mini = false;
+	private boolean shadow = true;
+	private Icon iconClass = null;
+	private IconPos iconpos = IconPos.LEFT;
+	private Theme theme = null;
+	private String wrapperClass = null;
 	
 	/**
 	 * @param container
@@ -43,6 +57,7 @@ public class AudioButton extends SelectableControl {
 	public AudioButton(IControlContainer container) {
 		super(container);
 		init();
+		System.out.println("AudioButton(IControlContainer container)");
 	}
 	
 	/**
@@ -52,6 +67,7 @@ public class AudioButton extends SelectableControl {
 	public AudioButton(IControlContainer container, String name) {
 		super(container, name);
 		init();
+		System.out.println("AudioButton(IControlContainer container, String name)");
 	}
 	
 	/* (non-Javadoc)
@@ -68,6 +84,8 @@ public class AudioButton extends SelectableControl {
 	 * @see de.jwic.base.Control#actionPerformed(java.lang.String, java.lang.String)
 	 */
 	public void actionPerformed(String actionId, String parameter) {
+		System.out.println("++++++++++++++++++++AudioButton.actionPerformed");
+		System.out.println("             "+actionId+"  "+parameter);
 		click();
 	}
 	

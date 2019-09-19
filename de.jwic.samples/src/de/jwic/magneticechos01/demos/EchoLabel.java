@@ -14,7 +14,7 @@
  * limitations under the License.
  *  
  *******************************************************************************/
-package de.jwic.mobile06.demos;
+package de.jwic.magneticechos01.demos;
 
 import de.jwic.controls.HTMLElement;
 import java.util.HashMap;

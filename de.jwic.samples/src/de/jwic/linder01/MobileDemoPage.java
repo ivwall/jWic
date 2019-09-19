@@ -1,4 +1,4 @@
-package de.jwic.mobile06;
+package de.jwic.linder01;
 
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
