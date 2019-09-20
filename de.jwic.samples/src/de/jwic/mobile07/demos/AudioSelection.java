@@ -25,11 +25,11 @@ public class AudioSelection implements SelectionListener {
 	}
 	public void objectSelected(SelectionEvent event){
 		System.out.println("objectSelected = "+audioTitle);
-		try {
-			echoLabel.setText(audioTitle);
-		} catch( Exception ex) {
-			System.out.println("AudioSelection.objectSelected "+ex.toString());
-		}
+		//try {
+		//	echoLabel.setText(audioTitle);
+		//} catch( Exception ex) {
+		//	System.out.println("AudioSelection.objectSelected "+ex.toString());
+		//}
 		try {
 			ckBoxAsLbl.setLabel(audioTitle);
 		} catch( Exception ex) {

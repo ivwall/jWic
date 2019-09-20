@@ -62,12 +62,13 @@ public class EchoWindow extends MobileDemoModule {
 	public Control createPage(IControlContainer controlContainer) {
 		final ControlContainer container = new ControlContainer(controlContainer);
 		
-		label = new EchoLabel(container, "label");
-		label.setText("Select an echo.");
+		//label = new EchoLabel(container, "label");
+		//label.setText("Select an echo.");
 		
 		final MCheckBox checkBox = new MCheckBox(container, "checkBox");
 		checkBox.setLabel("Toggle Me!");
 		
+		final MCheckBox blankrow = new MCheckBox(container, "blankrow");
 		
 		ScrollableContainer sc = new ScrollableContainer(container);
 		sc.setHeight("350px");
@@ -106,8 +107,11 @@ public class EchoWindow extends MobileDemoModule {
 				//--------------
 				// I don't like the label being passed into the construtor
 				// but whatever
+				
+				//arrayOButtons[i].addSelectionListener(
+				//	    (new AudioSelection(""+arr.get(i), label, checkBox)));
 				arrayOButtons[i].addSelectionListener(
-					    (new AudioSelection(""+arr.get(i),label,checkBox)));
+					    (new AudioSelection(""+arr.get(i), null, checkBox)));
 				//--------------------------------
 				arrayOButtons[i].addSelectionListener(new SelectionListener(){
 					@Override

@@ -1,6 +1,6 @@
 package de.jwic.mobile07.demos;
 
-import de.jwic.mobile06.MobileDemoModule;
+import de.jwic.mobile07.MobileDemoModule;
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
@@ -46,7 +46,7 @@ import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
 
 import de.jwic.controls.mobile04.MButton;
-import de.jwic.controls.mobile04.MCheckBox;
+import de.jwic.controls.mobile03.MCheckBox;
 
 public class EchoWindow extends MobileDemoModule {
 	
