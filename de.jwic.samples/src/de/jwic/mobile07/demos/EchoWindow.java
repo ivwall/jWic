@@ -70,7 +70,7 @@ public class EchoWindow extends MobileDemoModule {
 		
 		final MCheckBox blankrow = new MCheckBox(container, "blankrow");
 		
-		ScrollableContainer sc = new ScrollableContainer(container);
+		final ScrollableContainer sc = new ScrollableContainer(container);
 		sc.setHeight("350px");
 		sc.setWidth("300px");
 		

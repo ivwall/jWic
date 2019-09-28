@@ -45,6 +45,9 @@ import de.jwic.events.ElementSelectedListener;
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
 
+import de.jwic.controls.mobile04.MButton;
+import de.jwic.controls.mobile03.MCheckBox;
+
 public class EchoWindow extends MobileDemoModule {
 	
     protected transient Log log = LogFactory.getLog(getClass());
@@ -61,6 +64,10 @@ public class EchoWindow extends MobileDemoModule {
 		
 		label = new EchoLabel(container, "label");
 		label.setText("Select an echo.");
+		
+		final MCheckBox checkBox = new MCheckBox(container, "checkBox");
+		checkBox.setLabel("Toggle Me!");
+		
 		
 		ScrollableContainer sc = new ScrollableContainer(container);
 		sc.setHeight("350px");
@@ -100,7 +107,7 @@ public class EchoWindow extends MobileDemoModule {
 				// I don't like the label being passed into the construtor
 				// but whatever
 				arrayOButtons[i].addSelectionListener(
-					    (new AudioSelection(""+arr.get(i),label)));
+					    (new AudioSelection(""+arr.get(i),label,checkBox)));
 				//--------------------------------
 				arrayOButtons[i].addSelectionListener(new SelectionListener(){
 					@Override

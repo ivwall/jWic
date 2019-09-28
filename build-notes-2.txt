@@ -94,3 +94,6 @@
    92  sudo systemctl restart tomcat
    93  ls -l
    94  history > build-notes-2.txt
+   
+   
+   https://vitux.com/how-to-install-adobe-flash-player-on-ubuntu/

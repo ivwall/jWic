@@ -69,7 +69,7 @@ public class EchoWindow extends MobileDemoModule {
 		checkBox.setLabel("Toggle Me!");
 		
 		
-		ScrollableContainer sc = new ScrollableContainer(container);
+		final ScrollableContainer sc = new ScrollableContainer(container);
 		sc.setHeight("350px");
 		sc.setWidth("300px");
 		
