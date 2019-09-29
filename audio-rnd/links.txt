@@ -1,6 +1,0 @@
-
-HTML5AudioControlCodeMag
-https://www.codemag.com/Article/1605051/Taming-the-HTML5-Audio-Control
-
-AudioPlayer
-https://osvaldas.info/audio-player-responsive-and-touch-friendly
