@@ -45,6 +45,9 @@
 	#* 
 	    stackoverflow.com/questions/9419263/playing-audio-with-javascript
 	    
+	    https://osvaldas.info/audio-player-responsive-and-touch-friendly
+	    https://osvaldas.info/examples/audio-player-responsive-and-touch-friendly/
+	    
 	    https://www.codemag.com/Article/1605051/Taming-the-HTML5-Audio-Control
 	    
 	    http://alexkatz.me/posts/building-a-custom-html5-audio-player-with-javascript/
@@ -55,10 +58,6 @@
 	    
 	    --
 	    
-	    w3schools.com/jsref/met_audio_play.asp
-	    
-	    https://blog.eduonix.com/web-programming-tutorials/learn-build-audio-player-using-html5/
-	    
 	    http://www.instantshift.com/2012/06/08/15-free-html5-audio-players-for-your-website-and-blogs/
 	    
 	    http://www.schillmania.com/projects/soundmanager2/
@@ -68,7 +67,6 @@
 	    
 	    https://www.mediaelementjs.com/
 	    
-	    https://osvaldas.info/audio-player-responsive-and-touch-friendly
 	    
 	    https://freefrontend.com/css-music-players/
 	    
@@ -90,6 +88,10 @@
 	    http://www.java2s.com/Open-Source/Javascript_Free_Code/HTML5/Download_html5_audio_player_Free_Java_Code.htm
 	    
 	    http://www.bestjquery.com/demo/html5-audio-player/page/2/
+	    
+	    w3schools.com/jsref/met_audio_play.asp
+	    
+	    https://blog.eduonix.com/web-programming-tutorials/learn-build-audio-player-using-html5/
 	*#
 	<script type="text/javascript">
 		var soundPlayer = {

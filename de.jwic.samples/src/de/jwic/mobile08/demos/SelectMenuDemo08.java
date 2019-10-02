@@ -23,12 +23,12 @@ import de.jwic.events.SelectionListener;
  * @author vedad
  *
  */
-public final class SelectMenuDemo07 extends MobileDemoModule {
+public final class SelectMenuDemo08 extends MobileDemoModule {
 
 	/**
 	 * @param title
 	 */
-	public SelectMenuDemo07() {
+	public SelectMenuDemo08() {
 		super("Echo List");
 	}
 

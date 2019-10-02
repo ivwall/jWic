@@ -1,11 +1,11 @@
-package de.jwic.mobile07.demos;
+package de.jwic.mobile08.demos;
 
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 import de.jwic.controls.mobile04.MSelectmenu;
 import de.jwic.data.ISelectElement;
-import de.jwic.mobile07.MobileDemoModule;
+import de.jwic.mobile08.MobileDemoModule;
 
 import org.json.JSONObject;
 import org.json.JSONArray;

@@ -8,7 +8,7 @@ import de.jwic.base.Control;
 import de.jwic.base.IControlContainer;
 import de.jwic.mobile08.demos.EchoWindow;
 import de.jwic.mobile08.demos.InputDemo;
-import de.jwic.mobile08.demos.SelectMenuDemo07;
+import de.jwic.mobile08.demos.SelectMenuDemo08;
 
 /**
  * Created by boogie on 10/27/14.
@@ -21,7 +21,7 @@ public class MobileDemoApplication extends Application {
 		final List<MobileDemoModule> mobileDemoModules = new ArrayList<MobileDemoModule>();
 
 		mobileDemoModules.add(new EchoWindow());
-		mobileDemoModules.add(new SelectMenuDemo07());
+		mobileDemoModules.add(new SelectMenuDemo08());
 		mobileDemoModules.add(new InputDemo());
 		
 		return new MobileDemoPage(container, "demoPage", mobileDemoModules);
