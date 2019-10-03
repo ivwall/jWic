@@ -46,7 +46,11 @@ import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
 
 import de.jwic.controls.mobile04.MButton;
-import de.jwic.controls.mobile03.MCheckBox;
+import de.jwic.controls.mobile08.MCheckBox;
+import de.jwic.controls.mobile08.MTransitionBox;
+
+//---------------------------------------------------------------------
+import de.jwic.mobile08.demos.audio.Player;
 
 public class EchoWindow extends MobileDemoModule {
 	
@@ -62,13 +66,12 @@ public class EchoWindow extends MobileDemoModule {
 	public Control createPage(IControlContainer controlContainer) {
 		final ControlContainer container = new ControlContainer(controlContainer);
 		
-		//label = new EchoLabel(container, "label");
-		//label.setText("Select an echo.");
+		final Player audio = new Player(container, "audio");
 		
 		final MCheckBox checkBox = new MCheckBox(container, "checkBox");
 		checkBox.setLabel("Toggle Me!");
 		
-		final MCheckBox blankrow = new MCheckBox(container, "blankrow");
+		//final MTransitionBox blankrow = new MTransitionBox(container, "blankrow");
 		
 		final ScrollableContainer sc = new ScrollableContainer(container);
 		sc.setHeight("350px");

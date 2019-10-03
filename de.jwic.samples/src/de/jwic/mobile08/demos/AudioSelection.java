@@ -3,7 +3,7 @@ package de.jwic.mobile08.demos;
 import de.jwic.events.SelectionListener;
 import de.jwic.events.SelectionEvent;
 import de.jwic.controls.mobile04.MButton;
-import de.jwic.controls.mobile03.MCheckBox;
+import de.jwic.controls.mobile08.MCheckBox;
 
 public class AudioSelection implements SelectionListener {
 	private String    audioTitle = "not set";

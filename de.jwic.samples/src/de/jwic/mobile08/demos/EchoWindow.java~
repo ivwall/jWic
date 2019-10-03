@@ -1,6 +1,6 @@
-package de.jwic.mobile07.demos;
+package de.jwic.mobile08.demos;
 
-import de.jwic.mobile07.MobileDemoModule;
+import de.jwic.mobile08.MobileDemoModule;
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
@@ -48,6 +48,9 @@ import de.jwic.events.SelectionListener;
 import de.jwic.controls.mobile04.MButton;
 import de.jwic.controls.mobile03.MCheckBox;
 
+//---------------------------------------------------------------------
+import de.jwic.mobile08.demos.audio.Player;
+
 public class EchoWindow extends MobileDemoModule {
 	
     protected transient Log log = LogFactory.getLog(getClass());
@@ -62,8 +65,7 @@ public class EchoWindow extends MobileDemoModule {
 	public Control createPage(IControlContainer controlContainer) {
 		final ControlContainer container = new ControlContainer(controlContainer);
 		
-		//label = new EchoLabel(container, "label");
-		//label.setText("Select an echo.");
+		final Player audio = new Player(container, "audio");
 		
 		final MCheckBox checkBox = new MCheckBox(container, "checkBox");
 		checkBox.setLabel("Toggle Me!");
