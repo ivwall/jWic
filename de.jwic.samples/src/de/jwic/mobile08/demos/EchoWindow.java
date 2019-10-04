@@ -69,9 +69,7 @@ public class EchoWindow extends MobileDemoModule {
 		final Player audio = new Player(container, "audio");
 		
 		final MCheckBox checkBox = new MCheckBox(container, "checkBox");
-		checkBox.setLabel("Toggle Me!");
-		
-		//final MTransitionBox blankrow = new MTransitionBox(container, "blankrow");
+		checkBox.setLabel("select V");
 		
 		final ScrollableContainer sc = new ScrollableContainer(container);
 		sc.setHeight("350px");
