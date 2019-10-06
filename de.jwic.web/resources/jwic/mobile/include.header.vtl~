@@ -11,6 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	#* PRODUCTION-MINIFY-START *#
 	#* This part is replaced during the build process with a single CSS and a single JS *#
+	
     <script src="$contextPath/jwic/lib/jQuery/js/jquery-1.8.2.js"></script>
     <script src="$contextPath/jwic/lib/jQuery/js/jquery-ui-1.9.1.custom.js"></script>
     <script src="$contextPath/jwic/jwic_core.js"></script>
@@ -35,10 +36,22 @@
     <script src="$contextPath/mobile/jquery.mobile.datepicker.js"></script>
     
     #* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *#
+    #*
+        http://jquerynoconflict.discoverproductivity.co.uk/noconflict.html
+    *#
+    #* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *#
+    
     <link href="$contextPath/mobile/audio/jplayer/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+    #*
     <script src="$contextPath/mobile/audio/jquery.min.js"></script>
-    <script src="$contextPath/mobile/audio/jplayer/jquery.jplayer.js"></script>
+    *#
+    #*
+	<script type="text/javascript">
+		var jQuery_min = $.noConflict(true);
+	</script>
+	*#
     <script src="$contextPath/mobile/audio/jplayer/jquery.jplayer.min.js"></script>
+    <script src="$contextPath/mobile/audio/jplayer/jquery.jplayer.js"></script>
     <script src="$contextPath/mobile/audio/jplayer/jquery.jplayer.swf"></script>
     <script type="text/javascript">
 	//<![CDATA[
