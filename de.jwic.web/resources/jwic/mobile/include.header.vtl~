@@ -13,6 +13,12 @@
 	#* This part is replaced during the build process with a single CSS and a single JS *#
 	
     <script src="$contextPath/jwic/lib/jQuery/js/jquery-1.8.2.js"></script>
+    #*
+	<script>
+	   var $x = jQuery.noConflict();
+	   alert("Version: "+$x.fn.jquery);
+	</script>
+	*#
     <script src="$contextPath/jwic/lib/jQuery/js/jquery-ui-1.9.1.custom.js"></script>
     <script src="$contextPath/jwic/jwic_core.js"></script>
     <script src="$contextPath/jwic/mobile/jwic_mobile.js"></script>
@@ -42,10 +48,14 @@
     #* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *#
     
     <link href="$contextPath/mobile/audio/jplayer/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
-    #*
     <script src="$contextPath/mobile/audio/jquery.min.js"></script>
-    *#
     #*
+	<script>
+	   var $y = jQuery.noConflict();
+	   alert("Version: "+$y.fn.jquery);
+	</script>
+	*#
+	#*
 	<script type="text/javascript">
 		var jQuery_min = $.noConflict(true);
 	</script>
