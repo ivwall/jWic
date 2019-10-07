@@ -130,7 +130,9 @@ public class AudioButton extends SelectableControl {
 	
 	//private String audioLink = "not set";
 	public void setAudioLink(String l) {
-		audiolink = l;
+		System.out.println("AudioButton.setAudioLink  is debug .. ");
+		//audiolink = l;  <<<<<<<<<<<<<<<<<<<  working
+		audiolink = "";
 	}
 	
 	public String getAudioLink() {

@@ -127,7 +127,6 @@ public class EchoWindow extends MobileDemoModule {
 		} catch(Exception e) {
 			System.out.println(e);
 		}
-		
 		return container;
 	}
 
