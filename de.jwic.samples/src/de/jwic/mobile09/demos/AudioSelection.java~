@@ -1,4 +1,4 @@
-package de.jwic.mobile08.demos;
+package de.jwic.mobile09.demos;
 
 import de.jwic.events.SelectionListener;
 import de.jwic.events.SelectionEvent;
@@ -25,11 +25,6 @@ public class AudioSelection implements SelectionListener {
 	}
 	public void objectSelected(SelectionEvent event){
 		System.out.println("objectSelected = "+audioTitle);
-		//try {
-		//	echoLabel.setText(audioTitle);
-		//} catch( Exception ex) {
-		//	System.out.println("AudioSelection.objectSelected "+ex.toString());
-		//}
 		try {
 			ckBoxAsLbl.setLabel(audioTitle);
 		} catch( Exception ex) {
@@ -40,4 +35,3 @@ public class AudioSelection implements SelectionListener {
 		audioTitle = t;
 	}
 }
-

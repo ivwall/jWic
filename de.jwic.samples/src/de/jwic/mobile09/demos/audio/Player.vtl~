@@ -1,37 +1,27 @@
-<div id="jquery_jplayer_1" class="jp-jplayer"></div>
-<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
-	<div class="jp-type-single">
-		<div class="jp-gui jp-interface">
-			<div class="jp-controls">
-				<button class="jp-play" role="button" tabindex="0">play</button>
-				<button class="jp-stop" role="button" tabindex="0">stop</button>
-			</div>
-			<div class="jp-progress">
-				<div class="jp-seek-bar">
-					<div class="jp-play-bar"></div>
-				</div>
-			</div>
-			<div class="jp-volume-controls">
-				<button class="jp-mute" role="button" tabindex="0">mute</button>
-				<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
-				<div class="jp-volume-bar">
-					<div class="jp-volume-bar-value"></div>
-				</div>
-			</div>
-			<div class="jp-time-holder">
-				<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-				<div class="jp-toggles">
-					<button class="jp-repeat" role="button" tabindex="0">repeat</button>
-				</div>
-			</div>
+<div id="container">
+	<!--div class="players" id="player1-container">
+		<br>
+		<div class="media-wrapper">
+			<video id="player1" width="640" height="360" style="max-width:100%;" poster="http://www.mediaelementjs.com/images/big_buck_bunny.jpg" preload="none" controls playsinline webkit-playsinline>
+				<source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/CastVideos/mp4/BigBuckBunny.mp4" type="video/mp4">
+				<track srclang="en" kind="subtitles" src="mediaelement.vtt">
+				<track srclang="en" kind="chapters" src="chapters.vtt">
+			</video>
 		</div>
-		<div class="jp-details">
-			<div class="jp-title" aria-label="title">&nbsp;</div>
+		<br>
+		<div>
+			<label>Sources <select name="sources">
+				<option value="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">MP4</option>
+				<option value="http://ep-lin-upload.s3.amazonaws.com/vupl_lin/F64/CDF/F64CDF3B0348471E95C244DE2DDDD3F3">MP4 (no ext.)</option>
+			</select>
+			</label>
 		</div>
-		<div class="jp-no-solution">
-			<span>Update Required</span>
-			To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+	</div-->
+	<div class="players" id="player2-container">
+		<div class="media-wrapper">
+			<audio id="player2" preload="none" controls style="max-width:100%;">
+				<source src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3" type="audio/mp3">
+			</audio>
 		</div>
 	</div>
 </div>
