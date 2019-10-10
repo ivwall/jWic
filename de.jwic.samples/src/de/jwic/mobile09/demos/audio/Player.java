@@ -20,4 +20,7 @@ public class Player extends Control {
 		System.out.println("Player.setAudio "+"http://localhost:8080/01-amp3s/"+strAudio);
 		return "http://localhost:8080/01-amp3s/"+strAudio;
 	}
+	public String getTitle() {
+		return strAudio;
+	}
 }

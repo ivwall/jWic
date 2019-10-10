@@ -11,7 +11,9 @@
         <input id="$control.controlID" 
                type="button" 
                data-enhanced="true" 
-               value="$!control.title" 
+               #*----------------------------------------------*#
+               #*  value="$!control.title"                     *# 
+               #*----------------------------------------------*#
                #if(!$control.enabled) disabled #end>
         </input>
         
@@ -31,8 +33,6 @@
          id="$control.controlID" 
          type="button" 
          data-enhanced="true" 
-         #*----------------------------------------------*#
-         #* value="$!control.title" *# 
-         #*----------------------------------------------*#
+         value="$!control.title" 
          #if(!$control.enabled) disabled #end></input>
 </div>
