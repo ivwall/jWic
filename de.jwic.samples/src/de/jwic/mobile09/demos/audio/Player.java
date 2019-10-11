@@ -5,7 +5,6 @@ import de.jwic.base.IControlContainer;
 import de.jwic.base.IResourceControl;
 import de.jwic.base.Control;
 
-
 public class Player extends Control {
 	
 	private String strAudio = "";
