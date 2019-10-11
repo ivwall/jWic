@@ -112,7 +112,7 @@ public class EchoWindow extends MobileDemoModule {
 				//arrayOButtons[i].addSelectionListener(
 				//	    (new AudioSelection(""+arr.get(i), label, checkBox)));
 				arrayOButtons[i].addSelectionListener(
-					    (new AudioSelection(""+arr.get(i), null, checkBox)));
+					    (new AudioSelection(""+arr.get(i), null, checkBox, audio)));
 				//--------------------------------
 				arrayOButtons[i].addSelectionListener(new SelectionListener(){
 					@Override
@@ -127,7 +127,6 @@ public class EchoWindow extends MobileDemoModule {
 		} catch(Exception e) {
 			System.out.println(e);
 		}
-		
 		return container;
 	}
 

@@ -75,7 +75,7 @@ public class EchoWindow extends MobileDemoModule {
 		sc.setHeight("350px");
 		sc.setWidth("300px");
 		
-		sc.setTemplateName(getClass().getName()+"_group");
+		//sc.setTemplateName(getClass().getName()+"_group");
 		TableLayoutContainer tlc = new TableLayoutContainer(sc, "table");
 		tlc.setColumnCount(1);
 
