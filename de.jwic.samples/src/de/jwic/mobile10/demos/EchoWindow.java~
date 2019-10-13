@@ -1,6 +1,6 @@
-package de.jwic.mobile09.demos;
+package de.jwic.mobile10.demos;
 
-import de.jwic.mobile09.MobileDemoModule;
+import de.jwic.mobile10.MobileDemoModule;
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
@@ -50,7 +50,7 @@ import de.jwic.controls.mobile08.MCheckBox;
 import de.jwic.controls.mobile08.MTransitionBox;
 
 //---------------------------------------------------------------------
-import de.jwic.mobile09.demos.audio.Player;
+import de.jwic.mobile10.demos.audio.Player;
 
 public class EchoWindow extends MobileDemoModule {
 	
@@ -119,6 +119,7 @@ public class EchoWindow extends MobileDemoModule {
 					public void objectSelected(SelectionEvent event) {
 						System.out.println("++++++++++++++++objectSelected");
 						System.out.println("                "+event.toString());
+						container.requireRedraw();
 					}
 				});
 				arrayOButtons[i].setTitle(""+arr.get(i));
