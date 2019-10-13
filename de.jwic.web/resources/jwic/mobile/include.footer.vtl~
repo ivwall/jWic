@@ -35,6 +35,20 @@
      document.forms['jwicform'].__ticket.value = '$context.getRequestTicket($layerid)';
 
 }());
-</script> 
+</script>
+
+<!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<script src="$contextPath/mobile/audio2/mediaelement-and-player.js"></script>
+<script src="$contextPath/mobile/audio2/renderers/dailymotion.js"></script>
+<script src="$contextPath/mobile/audio2/build/renderers/facebook.js"></script>
+<script src="$contextPath/mobile/audio2/build/renderers/soundcloud.js"></script>
+<script src="$contextPath/mobile/audio2/build/renderers/twitch.js"></script>
+<script src="$contextPath/mobile/audio2/build/renderers/vimeo.js"></script>
+<script src="demo.js"></script>
+    
+<!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
 </body>
 </html>
