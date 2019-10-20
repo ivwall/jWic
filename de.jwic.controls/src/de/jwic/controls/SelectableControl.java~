@@ -52,6 +52,7 @@ public abstract class SelectableControl extends HTMLElement {
 	 * @param listener
 	 */
 	public void addSelectionListener(SelectionListener listener) {
+		System.out.println("+++++++++++SelectableControl.addSelectionListener");
 		if (selectedListeners == null) {
 			selectedListeners = new ArrayList<SelectionListener>();
 		}
@@ -86,6 +87,7 @@ public abstract class SelectableControl extends HTMLElement {
 	 */
 	public void click() {
 		// notify the listeners
+		System.out.println("++++++++++++++++++++++++SelectableControl.click()");
 		if (selectedListeners != null) {
 			SelectionEvent se = new SelectionEvent(this);
 			for (Iterator<SelectionListener> it = selectedListeners.iterator(); it.hasNext(); ) {
