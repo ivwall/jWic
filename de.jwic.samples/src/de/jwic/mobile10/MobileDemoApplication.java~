@@ -8,7 +8,7 @@ import de.jwic.base.Control;
 import de.jwic.base.IControlContainer;
 import de.jwic.mobile10.demos.EchoWindow;
 import de.jwic.mobile10.demos.InputDemo;
-import de.jwic.mobile10.demos.SelectMenuDemo09;
+import de.jwic.mobile10.demos.SelectMenuDemo10;
 
 public class MobileDemoApplication extends Application {
 
