@@ -50,6 +50,7 @@ import de.jwic.controls.mobile08.MCheckBox;
 import de.jwic.controls.mobile08.MTransitionBox;
 
 //---------------------------------------------------------------------
+import de.jwic.mobile10.demos.audio.AudioController;
 import de.jwic.mobile10.demos.audio.Player;
 
 public class EchoWindow extends MobileDemoModule {
@@ -65,6 +66,8 @@ public class EchoWindow extends MobileDemoModule {
 	@Override
 	public Control createPage(IControlContainer controlContainer) {
 		final ControlContainer container = new ControlContainer(controlContainer);
+		
+		final AudioController audioCtl = new AudioController( container );
 		
 		final Player audio = new Player(container, "audio");
 		

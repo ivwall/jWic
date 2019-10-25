@@ -119,7 +119,7 @@ public class EchoWindow extends MobileDemoModule {
 					public void objectSelected(SelectionEvent event) {
 						System.out.println("++++++++++++++++objectSelected");
 						System.out.println("                "+event.toString());
-						container.requireRedraw();
+						//container.requireRedraw();
 					}
 				});
 				arrayOButtons[i].setTitle(""+arr.get(i));
