@@ -29,5 +29,17 @@ public class AudioController extends ControlContainer {
 	private void internalInit() {
 		this.container = new ControlContainer(this, "content");
 	}
-
+	
+	String audioStr = "not set";
+	public void setAudio(String a) {
+		System.out.println("AudioController.setAudio "+a);
+		audioStr = a;
+	}
+	public String getAudio() {
+		System.out.println("Player.setAudio "+"http://localhost:8080/01-amp3s/"+audioStr);
+		return "http://localhost:8080/01-amp3s/"+audioStr;
+	}
+	public String getTitle() {
+		return audioStr;
+	}
 }

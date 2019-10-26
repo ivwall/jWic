@@ -6,7 +6,9 @@ import de.jwic.base.IControlContainer;
 //import de.jwic.controls.mobile04.MSelectmenu;
 import de.jwic.data.ISelectElement;
 //import de.jwic.mobile10.MobileDemoModule;
+import de.jwic.base.JavaScriptSupport;
 
+@JavaScriptSupport
 public class AudioController extends ControlContainer {
 	
 	private ControlContainer container;
