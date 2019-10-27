@@ -708,7 +708,7 @@ JWic.util = (function($, JWic){
      */
     var loadScripts = function loadScripts(libs, scripts, scriptEvalFunction){
     	
-    	//alert("jWic loadScripts "+scripts);
+    	alert("jWic loadScripts "+scripts);
     	
         scriptEvalFunction = scriptEvalFunction || identity;
         return whenAll(jQuery.map(libs,loadLibAsync)).then(function(){

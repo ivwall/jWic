@@ -1,3 +1,18 @@
+		<!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+		
+		<!--script src="$contextPath/mobile/audio2/mediaelement-and-player.js"></script>
+		<script src="$contextPath/mobile/audio2/demo.js"></script-->
+		
+		
+		<script src="$contextPath/audio2/audioplayer.js"></script>
+		<script>
+		    $( function() { 
+		         $( 'audio' ).audioPlayer();
+		    } );
+		</script>
+			
+		<!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+	
 	</form>
 
 ## Execute script fragments that have been in the update.
@@ -37,12 +52,6 @@
 }());
 </script>
 
-<!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<script src="$contextPath/mobile/audio2/mediaelement-and-player.js"></script>
-<script src="$contextPath/mobile/audio2/demo.js"></script>
-    
-<!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 
 </body>
