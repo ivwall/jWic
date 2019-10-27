@@ -80,7 +80,7 @@
 				thePlayer.find( 'audio' ).css( { 'width': 0, 'height': 0, 'visibility': 'hidden' } );
 				thePlayer.append( '<div class="' + cssClass.time + ' ' + cssClass.timeCurrent + '"></div><div class="' + cssClass.bar + '"><div class="' + cssClass.barLoaded + '"></div><div class="' + cssClass.barPlayed + '"></div></div><div class="' + cssClass.time + ' ' + cssClass.timeDuration + '"></div><div class="' + cssClass.volume + '"><div class="' + cssClass.volumeButton + '" title="' + params.strVolume + '"><a href="#">' + params.strVolume + '</a></div><div class="' + cssClass.volumeAdjust + '"><div><div></div></div></div></div>' );
 
-				alert(">>>>> in the audioplayer.js javascript");
+				//alert(">>>>> in the audioplayer.js javascript");
 				
 				var theBar			  = thePlayer.find( '.' + cssClass.bar ),
 					barPlayed	 	  = thePlayer.find( '.' + cssClass.barPlayed ),

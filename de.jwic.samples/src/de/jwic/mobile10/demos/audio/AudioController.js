@@ -3,7 +3,7 @@
 	 * Invoked before the element is updated.
 	 */ 
 	beforeUpdate: function() {
-    	alert("AudioController beforeUpdate");
+    	//alert("AudioController beforeUpdate");
 	},
 	
 	/**
@@ -13,7 +13,7 @@
 	 * true, to prevent the update.
 	 */
 	doUpdate: function(element) {
-    	alert("AudioController doUpdate");
+    	//alert("AudioController doUpdate");
 	},
 
 	/**
@@ -21,9 +21,9 @@
 	 * the custom doUpdate function returned true.
 	 */
     afterUpdate: function ButtonAfterUpdate(){
-    	alert("AudioController afterUpdate");
+    	//alert("AudioController afterUpdate");
     	var mediaElements = document.querySelectorAll('video, audio'), i, total = mediaElements.length;
-    	alert("AudioController afterUpdate media total "+total);
+    	//alert("AudioController afterUpdate media total "+total);
    		for (i = 0; i < total; i++) {
    			new MediaElementPlayer(mediaElements[i], {
 			stretching: stretching,
@@ -46,6 +46,13 @@
 			}
 		});
    		}
+   		
+   		#* debugging *#
+   		var buttons = document.getElementsByTagName("button");
+   		alert("AudioController afterUpdate buttons.length "+buttons.length);
+   		//for (var i=0; < buttons.length; i++) {
+   		//	alert(buttons[i].id)
+   		//}
     },
 	
 	/**

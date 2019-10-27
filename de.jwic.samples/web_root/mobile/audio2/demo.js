@@ -97,8 +97,8 @@ for (var i = 0; i < sourcesTotal; i++) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-	alert("demo.js document.addEventListener");
-	alert("demo.js document.addEventListener lang "+lang);
+	//alert("demo.js document.addEventListener");
+	//alert("demo.js document.addEventListener lang "+lang);
 		
 	mejs.i18n.language(lang);
 

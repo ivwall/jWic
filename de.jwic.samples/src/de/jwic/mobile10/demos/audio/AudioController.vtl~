@@ -7,7 +7,6 @@
 		<!--script>
 		    $( function() { 
 		         $( 'audio' ).audioPlayer();
-		         alert("AudioController.vtl funtion");
 		    } );
 		</script-->
 	</div>

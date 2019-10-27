@@ -45,7 +45,7 @@
 			<script src="js/audioplayer.js"></script>
 			<script>
 				$( function() {
-					//alert("audio player function()");
+					alert("audio player function()");
 					$( 'audio' ).audioPlayer(); } 
 				);
 			</script>
