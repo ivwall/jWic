@@ -70,9 +70,8 @@ public class EchoWindow extends MobileDemoModule {
 		final AudioController audioCtl = new AudioController( container );
 		
 		//final Player audio = new Player(container, "audio");
-		
-		final MCheckBox checkBox = new MCheckBox(container, "checkBox");
-		checkBox.setLabel("select V");
+		//final MCheckBox checkBox = new MCheckBox(container, "checkBox");
+		//checkBox.setLabel("select V");
 		
 		final ScrollableContainer sc = new ScrollableContainer(container);
 		sc.setHeight("350px");
@@ -116,8 +115,10 @@ public class EchoWindow extends MobileDemoModule {
 				//	    (new AudioSelection(""+arr.get(i), label, checkBox)));
 				//arrayOButtons[i].addSelectionListener(
 				//	    (new AudioSelection(""+arr.get(i), null, checkBox, audio)));
+				//arrayOButtons[i].addSelectionListener(
+				//	    (new AudioSelection(""+arr.get(i), null, checkBox, audioCtl)));
 				arrayOButtons[i].addSelectionListener(
-					    (new AudioSelection(""+arr.get(i), null, checkBox, audioCtl)));
+					    (new AudioSelection(""+arr.get(i), null, null, audioCtl)));
 				//--------------------------------
 				arrayOButtons[i].addSelectionListener(new SelectionListener(){
 					@Override
