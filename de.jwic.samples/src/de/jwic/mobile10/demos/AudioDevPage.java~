@@ -6,7 +6,7 @@ import de.jwic.base.IControlContainer;
 import de.jwic.data.ISelectElement;
 import de.jwic.mobile10.MobileDemoModule;
 
-import de.jwic.mobile10.demos.audio.VideoController;
+import de.jwic.mobile10.demos.audio.AudioController;
 
 /**
  * @author vedad
@@ -14,10 +14,10 @@ import de.jwic.mobile10.demos.audio.VideoController;
  */
 public final class AudioDevPage extends MobileDemoModule {
 	
-	private VideoController audioCtlr;
+	private AudioController audioCtlr;
 	
 	public AudioDevPage() {
-		super("VideoDev");
+		super("AudioDev");
 	}
 	
 	/* (non-Javadoc)
@@ -27,7 +27,7 @@ public final class AudioDevPage extends MobileDemoModule {
 	public Control createPage(IControlContainer controlContainer) {
 		final ControlContainer container = new ControlContainer(controlContainer, "controlContainer");
 		
-		audioCtlr = new VideoController(container);
+		audioCtlr = new AudioController(container);
 		
 		return container;
 	}		

@@ -3,7 +3,7 @@
 	 * Invoked before the element is updated.
 	 */ 
 	beforeUpdate: function() {
-    	alert("AudioController beforeUpdate");
+    	//alert("AudioController beforeUpdate");
     	/****
     	var mediaElements = document.querySelectorAll('video, audio'), i, total = mediaElements.length;
     	alert("AudioController afterUpdate mediaElements.length "+total);
@@ -41,7 +41,7 @@
 	 * true, to prevent the update.
 	 */
 	doUpdate: function(element) {
-    	alert("AudioController doUpdate");
+    	//alert("AudioController doUpdate");
 	},
 
 	/**
@@ -50,35 +50,39 @@
 	 */
     afterUpdate: function ButtonAfterUpdate(){
     	
-    	alert("AudioController afterUpdate");
+    	alert("VideoController afterUpdate");
     	var mediaElements = document.querySelectorAll('video, audio'), i, total = mediaElements.length;
+    	//var mediaElements = document.querySelectorAll('video'), i, total = mediaElements.length;
     	
-    	alert("AudioController afterUpdate mediaElements.length "+total);
+    	alert("VideoController afterUpdate mediaElements.length "+total);
     	
     	var audio_id
     	
    		//for (i = 0; i < total; i++) {
    			i = 0;
-   			alert("AudioController afterUpdate: i "+i);
+   			//alert("AudioController afterUpdate: i "+i);
    			new MediaElementPlayer(mediaElements[i], {
 			stretching: stretching,
 			pluginPath: '../build/',
 			success: function (media) {
-					alert("AudioController afterUpdate: i "+i);
-					alert("AudioController afterUpdate: media.id " + media.id);
+					alert("VideoController afterUpdate: i "+i);
+					alert("VideoController afterUpdate: media.id " + media.id);
 					
 					audio_id = media.id;
 					
 					var renderer = document.getElementById(media.id + '-rendername');
-					alert("AudioController afterUpdate: media.id " + media.id + '-rendername');
-					media.addEventListener('loadedmetadata', function () {
-						var src = media.originalNode.getAttribute('src').replace('&amp;', '&');
-						if (src !== null && src !== undefined) {
-							renderer.querySelector('.src').innerHTML = '<a href="' + src + '" target="_blank">' + src + '</a>';
-							renderer.querySelector('.renderer').innerHTML = media.rendererName;
-							renderer.querySelector('.error').innerHTML = '';
-						}
-					});
+					alert("VideoController afterUpdate: media.id " + media.id + '-rendername');
+					
+					//media.addEventListener('loadedmetadata', function () {
+					//	alert("VideoController afterUpdate: media.addEventListener ");
+					//	var src = media.originalNode.getAttribute('src').replace('&amp;', '&');
+					//	alert("VideoController afterUpdate: src " + src);
+					//	if (src !== null && src !== undefined) {
+					//		renderer.querySelector('.src').innerHTML = '<a href="' + src + '" target="_blank">' + src + '</a>';
+					//		renderer.querySelector('.renderer').innerHTML = media.rendererName;
+					//		renderer.querySelector('.error').innerHTML = '';
+					//	}
+					//});
 	
 					media.addEventListener('error', function (e) {
 						renderer.querySelector('.error').innerHTML = '<strong>Error</strong>: ' + e.message;
@@ -91,9 +95,9 @@
 				//mediaElements[i].play;
 				//alert("mediaElements["+i+"].id "+media.id);
 				//media.play;
-				alert("audio_id "+audio_id+"_html5");
+				//alert("audio_id "+audio_id+"_html5");
 				audio_id = audio_id+"_html5";
-				alert("x audio_id "+audio_id);
+				//alert("x audio_id "+audio_id);
 				var x = document.getElementById(audio_id).play();
 				//var x = document.getElementById();
 			} catch(err) {
