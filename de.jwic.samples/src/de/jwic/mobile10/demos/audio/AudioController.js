@@ -54,7 +54,6 @@
     	var mediaElements = document.querySelectorAll('video, audio'), i, total = mediaElements.length;
     	
     	//alert("AudioController afterUpdate mediaElements.length "+total);
-    	
     	var audio_id
     	
    		//for (i = 0; i < total; i++) {
@@ -100,18 +99,14 @@
 			} catch(err) {
 				alert(".play error message "+err.message);
 			}
+			
+			try {
+			} catch(err) {
+				alert(".play error message "+err.message);
+			}
+			
    		//}
    		#* debugging *#
-   		//var buttons = document.getElementsByTagName("Button");
-   		//var buttons = document.getElementById("Button");
-   		//alert("AudioController afterUpdate buttons.length "+buttons.length);
-   		//document.getElementById("Play").trigger("click");
-   		//for ( i=0; i<buttons.length; i++) {
-   		//	//alert(buttons[i].id)
-   		//	alert("i = "+i);
-   		//	tag = document.all(i).tagName;
-   		//	alert(tag);
-   		//}
     },
 	
 	/**

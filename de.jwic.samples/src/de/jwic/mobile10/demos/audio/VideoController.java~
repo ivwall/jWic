@@ -34,8 +34,8 @@ public class VideoController extends ControlContainer {
 		audioStr = a;
 	}
 	public String getAudio() {
-		System.out.println("Player.setVideo "+"http://localhost:8080/01-amp3s/"+"RDVBuildingTheAmwayBusiness.mp4");
-		return "http://localhost:8080/01-amp3s/"+"RDVBuildingTheAmwayBusiness.mp4";
+		System.out.println("Player.setVideo "+"http://localhost:8080/01-amp3s/"+"big_buck_bunny.mp4");
+		return "http://localhost:8080/01-amp3s/"+"big_buck_bunny.mp4";
 	}
 	public String getTitle() {
 		return audioStr;
