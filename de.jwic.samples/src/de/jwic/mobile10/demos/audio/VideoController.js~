@@ -103,17 +103,7 @@
 			} catch(err) {
 				alert(".play error message "+err.message);
 			}
-
-			
-			try {
-				alert("before await sleep(1000)");
-				//await sleep(1000);
-				alert("after await sleep(1000)");
-			} catch(err) {
-				alert(".play error message "+err.message);
-			}
-			
-		//}
+   		//}
    		#* debugging *#
    		//var buttons = document.getElementsByTagName("Button");
    		//var buttons = document.getElementById("Button");

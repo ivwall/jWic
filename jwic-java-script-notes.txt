@@ -1,3 +1,22 @@
+javascript thread sleep 
+
+https://flaviocopes.com/how-to-get-timestamp-javascript/
+
+
+
+
+
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now
+
+
+
+
+
+
+
+Pre Nov 10, 2019
 javascript.info
 
 howtocreate.co.uk/tutorials/javascript/important
