@@ -6,7 +6,7 @@
 <script>
     if(window.Worker) {
         // Create a new web worker
-        var worker = new Worker("file://home/ubuntu1804/dev03/a-js-thread/web-worker/worker.js");
+        var worker = new Worker("/home/ubuntu1804/dev03/a-js-thread/web-worker/worker.js");
         
         // Fire onMessage event handler
         worker.onmessage = function(event) {
