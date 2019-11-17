@@ -32,43 +32,24 @@
 		}
 	
 		self.onmessage = function(event) {
-			//setTimeout(findPrime(), 1000);
-			//sleep(9000).then(()=>{findPrime();});
-			//findPrime();
-			setTimeout(function findPrime() {
-							var n = 1;
-							var prime;
-							while (true) {
-								n++;
-								prime = true;
-								for (var i = 2; i <= Math.sqrt(n); i++)
-								if (n % i == 0) {
-									prime = false;
-									break;
-								}
-							if (prime)  postMessage(n);		 
-							}
-						}, 5000 );			
-
-		}
-
-		function findPrime()
-		{
-			var n = 1;
-			var prime;
-			while (true) {
-				n++;
-				prime = true;
-				for (var i = 2; i <= Math.sqrt(n); i++)
-					if (n % i == 0) {
-						prime = false;
-						break;
-					}
-				//await sleep(20);
-				sleep(20000);
-				if (prime)  postMessage(n);		 
+			for (i=0; i<10; i++) {
+				displayI(i);
+				newSleep(2000);
 			}
-		}			
+		}
+		
+		function newSleep(millisec){
+			var start = new Date().getTime();
+			for ( var i=0; i<1e7; i++ ) {
+				if((new Date().getTime() - start) > millisec){
+					break;
+				}
+			}
+		}
+			
+		function displayI(x) {
+			postMessage(x);
+		}
 	</script>
 	
 	
