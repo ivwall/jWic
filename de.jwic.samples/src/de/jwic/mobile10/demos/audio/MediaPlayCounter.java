@@ -24,7 +24,7 @@ public class MediaPlayCounter extends InputBox {
 	private String clearBtnText = "Clear Text";
 	private String wrapperClass = null;
 	private int keyupTimeoutBuffer = 100;
-	private Theme theme = null;
+	//private Theme theme = null;
 
 	/**
 	 * Constructs a new control instance and adds it to the specified container.
@@ -212,19 +212,19 @@ public class MediaPlayCounter extends InputBox {
 	/**
 	 * The value of this option is a string containing a space-separated list of classes to be applied to the outermost element of the textinput widget.
 	 */
-	@IncludeJsOption
-	public Theme getTheme() {
-		return theme;
-	}
+	//@IncludeJsOption
+	//public Theme getTheme() {
+	//	return theme;
+	//}
 
 	
 	/**
 	 * The value of this option is a string containing a space-separated list of classes to be applied to the outermost element of the textinput widget.
 	 */
-	public void setTheme(Theme theme) {
-		if (!theme.equals(this.theme))
-			requireRedraw();
-		this.theme = theme;
-	}
+	//public void setTheme(Theme theme) {
+	//	if (!theme.equals(this.theme))
+	//		requireRedraw();
+	//	this.theme = theme;
+	//}
 
 }
