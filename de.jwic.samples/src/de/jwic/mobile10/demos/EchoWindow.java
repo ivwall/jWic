@@ -69,15 +69,10 @@ public class EchoWindow extends MobileDemoModule {
 		
 		final AudioController audioCtl = new AudioController( container );
 		
-		//final Player audio = new Player(container, "audio");
-		//final MCheckBox checkBox = new MCheckBox(container, "checkBox");
-		//checkBox.setLabel("select V");
-		
 		final ScrollableContainer sc = new ScrollableContainer(container);
 		sc.setHeight("350px");
 		sc.setWidth("300px");
 		
-		//sc.setTemplateName(getClass().getName()+"_group");
 		TableLayoutContainer tlc = new TableLayoutContainer(sc, "table");
 		tlc.setColumnCount(1);
 
@@ -107,16 +102,7 @@ public class EchoWindow extends MobileDemoModule {
 			for (int i = 0; i < arr.length(); i++) {
 				System.out.println(" " + arr.get(i));
 				arrayOButtons[i] = new AudioButton(tlc);
-				//--------------
-				// I don't like the label being passed into the construtor
-				// but whatever
-				
-				//arrayOButtons[i].addSelectionListener(
-				//	    (new AudioSelection(""+arr.get(i), label, checkBox)));
-				//arrayOButtons[i].addSelectionListener(
-				//	    (new AudioSelection(""+arr.get(i), null, checkBox, audio)));
-				//arrayOButtons[i].addSelectionListener(
-				//	    (new AudioSelection(""+arr.get(i), null, checkBox, audioCtl)));
+				//--------------------------------
 				arrayOButtons[i].addSelectionListener(
 					    (new AudioSelection(""+arr.get(i), null, null, audioCtl)));
 				//--------------------------------
