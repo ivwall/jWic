@@ -4,34 +4,6 @@
 	 */ 
 	beforeUpdate: function() {
     	alert("AudioController beforeUpdate");
-    	/****
-    	var mediaElements = document.querySelectorAll('video, audio'), i, total = mediaElements.length;
-    	alert("AudioController afterUpdate mediaElements.length "+total);
-   		for (i = 0; i < total; i++) {
-   			//alert("AudioController afterUpdate: i "+i);
-   			new MediaElementPlayer(mediaElements[i], {
-			stretching: stretching,
-			pluginPath: '../build/',
-			success: function (media) {
-					alert("AudioController afterUpdate: media.id " + media.id);
-					var renderer = document.getElementById(media.id + '-rendername');
-					alert("AudioController afterUpdate: media.id " + media.id + '-rendername');
-					media.addEventListener('loadedmetadata', function () {
-						var src = media.originalNode.getAttribute('src').replace('&amp;', '&');
-						if (src !== null && src !== undefined) {
-							renderer.querySelector('.src').innerHTML = '<a href="' + src + '" target="_blank">' + src + '</a>';
-							renderer.querySelector('.renderer').innerHTML = media.rendererName;
-							renderer.querySelector('.error').innerHTML = '';
-						}
-					});
-	
-					media.addEventListener('error', function (e) {
-						renderer.querySelector('.error').innerHTML = '<strong>Error</strong>: ' + e.message;
-					});
-				}
-			});
-   		}
-   		****/
 	},
 	
 	/**
@@ -41,7 +13,7 @@
 	 * true, to prevent the update.
 	 */
 	doUpdate: function(element) {
-    	//alert("AudioController doUpdate");
+    	alert("AudioController doUpdate");
 	},
 
 	/**
@@ -50,7 +22,7 @@
 	 */
     afterUpdate: function ButtonAfterUpdate(){
     	
-    	//alert("AudioController afterUpdate");
+    	alert("AudioController afterUpdate");
     	var mediaElements = document.querySelectorAll('video, audio'), i, total = mediaElements.length;
     	
     	//alert("AudioController afterUpdate mediaElements.length "+total);
@@ -115,10 +87,15 @@
 			}
 			
 			try {
+				
+				alert("before getElementsByTagName");
+				var d = document.getElementsByTagName('mediaelementwrapper');
+				var k = d.childNodes.length;
+				alert("after getElementsByTagName  k (length)"+k);
+				
 			} catch(err) {
 				alert(".play error message "+err.message);
 			}
-			
    		//}
    		#* debugging *#
     },
@@ -126,9 +103,7 @@
 	/**
 	 * Invoked when the existing element is removed from the DOM tree.
 	 */
-	/***
 	destroy: function(element) {
     	alert("AudioController destroy");
 	}
-	***/
 }
