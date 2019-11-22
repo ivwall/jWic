@@ -21,3 +21,6 @@
 		<input type="hidden" name="layerid" value="$!layerid">		
 
 		<input type="submit" name="preventSubmit" onclick="return false;" style="position: absolute; top: -100px; left: -100px; width: 1px; height: 1px; visibility: hidden;"/>
+		<select name="lang"></select>
+		<select name="stretching"></select>
+		

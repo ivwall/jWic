@@ -3,7 +3,6 @@
 		<audio preload="auto" controls>
 			<source src="$control.audio">
 		</audio>
-		<script src="$contextPath/audio2/audioplayer.js"></script>
 		<br/>
 		<br/>
 	</div>

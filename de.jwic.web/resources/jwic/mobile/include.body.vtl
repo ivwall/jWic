@@ -9,6 +9,29 @@
 			JWic.ui.Notify.display("The application has been restarted. A possible reason is that you have been inactive for to long so that your session expired.", 'information');
 		#end
 	</script>
+
+	<!--script id="worker2" type="text/js-worker">
+	// https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
+	// this sleep function only works in an async function
+	// ms = milliseconds
+	// https://stackoverflow.com/questions/758688/sleep-in-javascript-delay-between-actions
+		function sleep(ms){
+			return new Promise(resolve => setTimeout(resolve, ms));
+		}
+	
+		self.onmessage = async function(event) {
+			for (i=0; i<10; i++) {
+				displayI(i);
+				await sleep(2000);
+			}
+		}
+		
+		function displayI(x) {
+			postMessage(x);
+		}
+	</script-->
+	
+	
 	
 	<form name="jwicform" id="jwicform" method="POST" enctype=#if($page.multipart)"multipart/form-data"#else"text/html;charset=iso-8859-1"#end onsubmit="return false">
 		<input type="hidden" name="_msid" value="$context.sessionId">
