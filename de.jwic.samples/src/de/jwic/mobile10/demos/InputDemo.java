@@ -39,15 +39,20 @@ public class InputDemo extends MobileDemoModule {
 		textInput.setText(" ");
 		textInput.setClearBtn(true);
 		
-		final Label labelForTextInputWithUpdateOnBlur = new Label(container, "labelForTextInputWithUpdateOnBlur");
+		final Label labelForTextInputWithUpdateOnBlur = 
+		             new Label(container, "labelForTextInputWithUpdateOnBlur");
+		             
 		labelForTextInputWithUpdateOnBlur.setText("Text Input With Mini and Update on Blur");
-		final Label labelForTextInputWithUpdateOnBlur2 = new Label(container, "labelForTextInputWithUpdateOnBlur2");
+		
+		final Label labelForTextInputWithUpdateOnBlur2 = 
+		             new Label(container, "labelForTextInputWithUpdateOnBlur2");
 
-		final MInputBox textInputWithUpdateOnBlur = new MInputBox(container, "textInputWithUpdateOnBlur");
+		final MInputBox textInputWithUpdateOnBlur = 
+		             new MInputBox(container, "textInputWithUpdateOnBlur");
 		textInputWithUpdateOnBlur.setUpdateOnBlur(true);
 		textInputWithUpdateOnBlur.setMini(true);
+		
 		textInputWithUpdateOnBlur.addValueChangedListener(new ValueChangedListener() {
-			
 			@Override
 			public void valueChanged(ValueChangedEvent event) {
 				labelForTextInputWithUpdateOnBlur2.setText(textInputWithUpdateOnBlur.getText());
@@ -57,14 +62,12 @@ public class InputDemo extends MobileDemoModule {
 		final MButton toggleFromJava = new MButton(container, "toggleFromJava");
 		toggleFromJava.setTitle("Send");
 		toggleFromJava.addSelectionListener(new SelectionListener() {
-			
 			@Override
 			public void objectSelected(SelectionEvent event) {
 				System.out.println("Toggle?");
 				//checkBox.setChecked(!checkBox.isChecked());
 			}
 		});
-		
 
 		return container;
 	}
