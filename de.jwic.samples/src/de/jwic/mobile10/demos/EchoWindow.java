@@ -104,7 +104,7 @@ public class EchoWindow extends MobileDemoModule {
 				arrayOButtons[i] = new AudioButton(tlc);
 				//--------------------------------
 				arrayOButtons[i].addSelectionListener(
-					    (new AudioSelection(""+arr.get(i), null, null, audioCtl)));
+					    (new AudioSelection(""+arr.get(i), audioCtl)));
 				//--------------------------------
 				arrayOButtons[i].addSelectionListener(new SelectionListener(){
 					@Override

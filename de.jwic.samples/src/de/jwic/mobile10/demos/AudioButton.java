@@ -16,9 +16,6 @@ import de.jwic.controls.mobile04.Icon;
 import de.jwic.controls.mobile04.IconPos;
 import de.jwic.controls.mobile04.Theme;
 
-//adding audio.Player 
-import de.jwic.mobile10.demos.audio.Player;
-
 /**
  * Represents the &lt;button&gt; html element. 
  * This button displays links to an audio, and - future - video file.
@@ -53,8 +50,6 @@ public class AudioButton extends SelectableControl {
 	private Theme theme = null;
 	private String wrapperClass = null;
 	
-	private Player player = null;
-	
 	/**
 	 * @param container
 	 */
@@ -62,27 +57,6 @@ public class AudioButton extends SelectableControl {
 		super(container);
 		init();
 		System.out.println("AudioButton(IControlContainer container)");
-	}
-	
-	/**
-	 * @param container
-	 * @param name
-	 */
-	public AudioButton(IControlContainer container, String name) {
-		super(container, name);
-		init();
-		System.out.println("AudioButton(IControlContainer container, String name)");
-	}
-	
-	/**
-	 * @param container
-	 * @param name
-	 */
-	public AudioButton(IControlContainer container, String name, Player p) {
-		super(container, name);
-		init();
-		System.out.println("AudioButton(IControlContainer container, String name, Player p)");
-		player = p;
 	}
 	
 	/* (non-Javadoc)
