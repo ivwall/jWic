@@ -11,9 +11,7 @@
         <input id="$control.controlID" 
                type="button" 
                data-enhanced="true" 
-               #*----------------------------------------------*#
-               #*  value="$!control.title"                     *# 
-               #*----------------------------------------------*#
+               value="$!control.title"
                #if(!$control.enabled) disabled #end>
         </input>
         
@@ -36,3 +34,13 @@
          value="$!control.title" 
          #if(!$control.enabled) disabled #end></input>
 </div>
+
+#*
+<audio id="player" src="$control.audioLink"></audio>
+<div> 
+  <button onclick="document.getElementById('player').play()">Play</button> 
+  <button onclick="document.getElementById('player').pause()">Pause</button> 
+  <button onclick="document.getElementById('player').volume += 0.1">Vol+ </button> 
+  <button onclick="document.getElementById('player').volume -= 0.1">Vol- </button> 
+</div>
+*#
