@@ -51,7 +51,6 @@ import de.jwic.controls.mobile08.MTransitionBox;
 
 //---------------------------------------------------------------------
 import de.jwic.mobile10.demos.audio.AudioController;
-import de.jwic.mobile10.demos.audio.Player;
 
 public class EchoWindow extends MobileDemoModule {
 	
