@@ -12,11 +12,11 @@ import de.jwic.mobile10.demos.audio.VideoController;
  * @author vedad
  *
  */
-public final class AudioDevPage extends MobileDemoModule {
+public final class VideoDevPage extends MobileDemoModule {
 	
-	private VideoController audioCtlr;
+	private VideoController videoCtlr;
 	
-	public AudioDevPage() {
+	public VideoDevPage() {
 		super("VideoDev");
 	}
 	
@@ -25,9 +25,10 @@ public final class AudioDevPage extends MobileDemoModule {
 	 */
 	@Override
 	public Control createPage(IControlContainer controlContainer) {
-		final ControlContainer container = new ControlContainer(controlContainer, "controlContainer");
+		final ControlContainer container = 
+		             new ControlContainer(controlContainer, "controlContainer");
 		
-		audioCtlr = new VideoController(container);
+		videoCtlr = new VideoController(container);
 		
 		return container;
 	}		
