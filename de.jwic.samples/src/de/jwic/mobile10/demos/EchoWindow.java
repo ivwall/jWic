@@ -81,8 +81,10 @@ public class EchoWindow extends MobileDemoModule {
 		    URL obj = new URL(url);
 		    HttpURLConnection con = (HttpURLConnection)obj.openConnection();
 		    int responseCode = con.getResponseCode();
+		    
 		    System.out.println("\nSending 'GET' request to URL : " + url);
 		    System.out.println("Response Code : " + responseCode);
+		    
 		    BufferedReader in =new BufferedReader(
 		    new InputStreamReader(con.getInputStream()));
 		    String inputLine;
@@ -99,12 +101,12 @@ public class EchoWindow extends MobileDemoModule {
 			AudioButton[] arrayOButtons = new AudioButton[arr.length()];
 			
 			for (int i = 0; i < arr.length(); i++) {
+				
 				System.out.println(" " + arr.get(i));
+				
 				arrayOButtons[i] = new AudioButton(tlc);
-				//--------------------------------
 				arrayOButtons[i].addSelectionListener(
 					    (new AudioSelection(""+arr.get(i), audioCtl)));
-				//--------------------------------
 				arrayOButtons[i].addSelectionListener(new SelectionListener(){
 					@Override
 					public void objectSelected(SelectionEvent event) {
