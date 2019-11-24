@@ -5,7 +5,6 @@ import de.jwic.events.SelectionEvent;
 import de.jwic.controls.mobile04.MButton;
 import de.jwic.controls.mobile08.MCheckBox;
 
-//import de.jwic.mobile10.demos.audio.Player;
 import de.jwic.mobile10.demos.audio.AudioController;
 
 public class AudioSelection implements SelectionListener {
