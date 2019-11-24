@@ -9,7 +9,7 @@ import de.jwic.base.IControlContainer;
 import de.jwic.mobile10.demos.AudioPage;
 import de.jwic.mobile10.demos.InputDemo;
 import de.jwic.mobile10.demos.SelectMenuDemo10;
-import de.jwic.mobile10.demos.VideoDevPage;
+import de.jwic.mobile10.demos.VideoPage;
 
 public class MobileDemoApplication extends Application {
 
@@ -19,7 +19,7 @@ public class MobileDemoApplication extends Application {
 		final List<MobileDemoModule> mobileDemoModules = new ArrayList<MobileDemoModule>();
 
 		mobileDemoModules.add(new AudioPage());
-		mobileDemoModules.add(new VideoDevPage());
+		mobileDemoModules.add(new VideoPage());
 		mobileDemoModules.add(new SelectMenuDemo10());
 		mobileDemoModules.add(new InputDemo());
 		

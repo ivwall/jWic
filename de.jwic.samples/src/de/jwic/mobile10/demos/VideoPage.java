@@ -12,11 +12,11 @@ import de.jwic.mobile10.demos.audio.VideoController;
  * @author vedad
  *
  */
-public final class VideoDevPage extends MobileDemoModule {
+public final class VideoPage extends MobileDemoModule {
 	
 	private VideoController videoCtlr;
 	
-	public VideoDevPage() {
+	public VideoPage() {
 		super("VideoDev");
 	}
 	
