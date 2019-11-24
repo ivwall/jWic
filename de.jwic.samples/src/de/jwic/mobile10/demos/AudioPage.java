@@ -24,11 +24,11 @@ import de.jwic.events.SelectionListener;
 
 import de.jwic.mobile10.demos.audio.AudioController;
 
-public class EchoWindow extends MobileDemoModule {
+public class AudioPage extends MobileDemoModule {
 	
     protected transient Log log = LogFactory.getLog(getClass());
     
-	public EchoWindow() {
+	public AudioPage() {
 		super("Echo Window");
 	}
 
