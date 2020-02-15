@@ -3,7 +3,7 @@
 	 * Invoked before the element is updated.
 	 */ 
 	beforeUpdate: function() {
-    	alert("AudioController beforeUpdate");
+    	//alert("AudioController beforeUpdate");
 	},
 	
 	/**
@@ -13,7 +13,7 @@
 	 * true, to prevent the update.
 	 */
 	doUpdate: function(element) {
-    	alert("AudioController doUpdate");
+    	//alert("AudioController doUpdate");
 	},
 
 	/**
@@ -22,7 +22,7 @@
 	 */
     afterUpdate: function ButtonAfterUpdate(){
     	
-    	alert("AudioController afterUpdate");
+    	//alert("AudioController afterUpdate");
     	var mediaElements = document.querySelectorAll('video, audio'), i, total = mediaElements.length;
     	
     	//alert("AudioController afterUpdate mediaElements.length "+total);
@@ -63,38 +63,38 @@
 				//mediaElements[i].play;
 				//alert("mediaElements["+i+"].id "+media.id);
 				//media.play;
-				alert( "audio_id.duration "+ x );
-				alert( "audio_id "+audio_id+"_html5" );
+				//alert( "audio_id.duration "+ x );
+				//alert( "audio_id "+audio_id+"_html5" );
 				audio_id = audio_id+"_html5";
-				alert( "x audio_id brefore play " + audio_id );
+				//alert( "x audio_id brefore play " + audio_id );
 				
 				//var m = parseInt( document.getElementById(audio_id).duration / 60, 10 );
 				//var s = document.getElementById(audio_id).duration % 60;
 				//alert(" minute " + m " seconds " + s);
 				var d = document.getElementById(audio_id).duration;
-				alert(" duration "+d);
+				//alert(" duration "+d);
 				var h = parseInt( d / 3600, 10 );
-				alert(" hours " + h );
+				//alert(" hours " + h );
 				var m = parseInt( d / 60, 10 );
-				alert(" minutes " + m );
+				//alert(" minutes " + m );
 				var s = d % 60;
-				alert(" seconds " + s );
+				//alert(" seconds " + s );
 				var x = document.getElementById(audio_id).play();
 				
 				//var x = document.getElementById();
 			} catch(err) {
-				alert(".play error message "+err.message);
+				//alert(".play error message "+err.message);
 			}
 			
 			try {
 
-				alert("before getElementsByTagName");
+				//alert("before getElementsByTagName");
 				var d = document.getElementsByTagName('mediaelementwrapper');
 				var k = d.childNodes.length;
-				alert("after getElementsByTagName  k (length)"+k);
+				//alert("after getElementsByTagName  k (length)"+k);
 				
 			} catch(err) {
-				alert(".play error message "+err.message);
+				//alert(".play error message "+err.message);
 			}
    		//}
    		#* debugging *#
@@ -104,6 +104,6 @@
 	 * Invoked when the existing element is removed from the DOM tree.
 	 */
 	destroy: function(element) {
-    	alert("AudioController destroy");
+    	//alert("AudioController destroy");
 	}
 }
